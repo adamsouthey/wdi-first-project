@@ -4,6 +4,6 @@ $(() => {
 
 
   $card.on('click', () => {
-    return console.log('Hello');
+    console.log('FJBDSKGBSKFGNSDJKFBSJK');
   });
 });

@@ -1,48 +1,141 @@
 *{
+  font-family: 'Architects Daughter', cursive;
   margin: 10;
-
-  }
+}
 
 body{
-margin: 0 auto;
-background: url('https://wallup.net/wp-content/uploads/2016/05/25/339073-wood-timber-closeup-wooden_surface-texture-curved_wood.jpg');
-width: 100%;
+  margin: 0 auto;
+  background: url('https://wallup.net/wp-content/uploads/2016/05/25/339073-wood-timber-closeup-wooden_surface-texture-curved_wood.jpg');
+  width: 100%;
 }
 
 h1 {
-font-family: 'Architects Daughter', cursive;
-text-align: center;
-font-size: 55px;
-
+  font-family: 'Architects Daughter', cursive;
+  text-align: center;
+  font-size: 55px;
 }
 
 .content {
-  max-width: 75%;
-  padding: 30px;
+  max-width: 60%;
+  padding: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   perspective: 1000px;
   perspective-origin: 50% 400px;
   margin: 0 auto;
+  float:right;
 }
 
 .card {
-  font-family: 'Architects Daughter', cursive;
-  font-size: 60px;
+  font-size: 40px;
   margin: 5px;
-  background: black;
+  border-radius: 10px;
+  background: #0F0F3A;
   color: white;
   text-align: center;
   line-height: 150px;
   font-weight: 600;
   width: 20%;
   transform: rotateX(30deg);
-  text-shadow: 2px 2px 8px #FF0000;
+  text-shadow: 4px 4px 8px yellow;
+}
+@-webkit-keyframes pulse {
+  25% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  75% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
 }
 
-.test{
+@keyframes pulse {
+  25% {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  75% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+.card {
+  display: inline-block;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.card:hover {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.left{
+  margin-left: 70px;
+}
+.rules{
   text-align: center;
   font-size: 50px;
+
   font-family: 'Architects Daughter', cursive;
+}
+
+p{
+  text-align: center;
+  font-size:25px;
+}
+
+.buttons {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 20px;
+}
+
+footer {
+  display: flex;
+flex-wrap: wrap;
+  max-width: 935px;
+  font-size: 12px;
+  padding: 40px 20px;
+  position: absolute;
+right: 0;
+bottom: 0;
+left: 100;
+justify-content: center;
+}
+
+footer ul {
+display: flex;
+font-size: 20px;
+}
+
+footer ul li {
+  color: #999;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-right: 10px;
+  line-height: 1.5;
+}
+
+footer ul li:last-of-type {
+margin: 0 0 0 auto;
+color: black;
+text-transform: uppercase;
+}
+
+footer ul li a {
+  color: black;
 }
