@@ -1,3 +1,48 @@
+*{
+  margin: 10;
+
+  }
+
 body{
-  background-color: red;
+margin: 0 auto;
+background: url('https://wallup.net/wp-content/uploads/2016/05/25/339073-wood-timber-closeup-wooden_surface-texture-curved_wood.jpg');
+width: 100%;
+}
+
+h1 {
+font-family: 'Architects Daughter', cursive;
+text-align: center;
+font-size: 55px;
+
+}
+
+.content {
+  max-width: 75%;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  perspective: 1000px;
+  perspective-origin: 50% 400px;
+  margin: 0 auto;
+}
+
+.card {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 60px;
+  margin: 5px;
+  background: black;
+  color: white;
+  text-align: center;
+  line-height: 150px;
+  font-weight: 600;
+  width: 20%;
+  transform: rotateX(30deg);
+  text-shadow: 2px 2px 8px #FF0000;
+}
+
+.test{
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Architects Daughter', cursive;
 }
