@@ -28,7 +28,7 @@ h1 {
 }
 
 .card {
-  font-size: 40px;
+  font-size: 90px;
   margin: 5px;
   border-radius: 10px;
   background: #0F0F3A;
@@ -36,10 +36,24 @@ h1 {
   text-align: center;
   line-height: 150px;
   font-weight: 600;
-  width: 20%;
+  height: 210px;
+  width: 175px;
   transform: rotateX(30deg);
   text-shadow: 4px 4px 8px yellow;
 }
+
+.card:hover {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+
 @-webkit-keyframes pulse {
   25% {
     -webkit-transform: scale(1.2);
@@ -64,27 +78,8 @@ h1 {
   }
 }
 
-.card {
-  display: inline-block;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-}
-
-.card:hover {
-  -webkit-animation-name: pulse;
-  animation-name: pulse;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-}
-
 .left{
-  margin-left: 70px;
+  margin-left:40px;
 }
 .rules{
   text-align: center;
@@ -96,6 +91,21 @@ h1 {
 p{
   text-align: center;
   font-size:25px;
+}
+
+.card p {
+  font-size: 90px;
+  margin: 5px;
+  border-radius: 10px;
+  background: #0F0F3A;
+  color: white;
+  text-align: center;
+  line-height: 150px;
+  font-weight: 600;
+  height: 200px;
+  width: 175px;
+  transform: rotateX(30deg);
+  text-shadow: 4px 4px 8px yellow;
 }
 
 .buttons {
