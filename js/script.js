@@ -4,10 +4,6 @@ $(() => {
   // console.log('FJBDSKGBSKFGNSDJKFBSJK');
   //   });
 
-
-
-
-
   // Define cards array
   let app = {
     cards: [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8],
@@ -15,7 +11,7 @@ $(() => {
       app.shuffle();
 
     },
-    //Shuffle the cards array
+    //Shuffle Deck
     shuffle: () => {
       let random = 0;
       let temp = 0;
@@ -42,7 +38,11 @@ $(() => {
     },
     checkForMatch: () => {
       if($('.selected').length == 2) {
-        console.log($('.selected').last().data('cardValue'));
+        if($('.selected').first().data('cardValue') == $('.selected').last().data('cardValue')) {
+          //Remove Matching Pair
+        } else {
+          //Flip back over
+        }
       }
     }
 
