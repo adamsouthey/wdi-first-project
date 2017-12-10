@@ -39,13 +39,31 @@ $(() => {
     checkForMatch: () => {
       if($('.selected').length == 2) {
         if($('.selected').first().data('cardValue') == $('.selected').last().data('cardValue')) {
-          //Remove Matching Pair
+          //Remove Matching Pair From board
+          $('.selected').each(function(){
+            $(this).animate({opacity: 0}).removeClass('unpaired');
+
+          });
+          $('.selected').each(function(){
+            $(this).removeClass('selected');
+          });
+          app.winCondition();
         } else {
           //Flip back over
+          setTimeout(function(){
+            $('.selected').each(function(){
+              $(this).html('').removeClass('selected');
+            });
+          }, 500);
         }
       }
-    }
+    },
+    winCondition: () => {
+      if($('.unpaired').length === 0){
+        $('.container').html('You beat the game! Well done!');
+      }
 
+    }
   };
   app.initialise();
 });
