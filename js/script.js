@@ -60,7 +60,7 @@ $(() => {
     },
     winCondition: () => {
       if($('.unpaired').length === 0){
-        $('.container').html('You beat the game! Well done!');
+        alert('You beat the game! Well done!');
       }
 
     }
