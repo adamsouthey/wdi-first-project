@@ -4,11 +4,24 @@ $(() => {
   // console.log('FJBDSKGBSKFGNSDJKFBSJK');
   //   });
   // Define cards array
-let score = 0;
+  let score = 0;
   let app = {
     cards: [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8],
     initialise: () => {
-      app.shuffle();
+      $('.content').hide();
+      $('.left').hide();
+
+      const name = $('#playerName').val();
+      $('.player1Name').html(name);
+      $(' #start').on('click', function() {
+        $('.welcome').hide();
+        $('.content').show();
+        $('.left').show();
+
+      });
+
+
+  app.shuffle();
 
     },
     //Shuffle Deck

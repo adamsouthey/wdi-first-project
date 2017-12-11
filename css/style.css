@@ -1,6 +1,7 @@
 *{
   font-family: 'Architects Daughter', cursive;
   margin: 10;
+  box-sizing: border-box;
 }
 
 body{
@@ -16,16 +17,18 @@ h1 {
 }
 
 .content {
+  display: flex;
   max-width: 60%;
   padding: 20px;
-  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   perspective: 1000px;
   perspective-origin: 50% 400px;
   margin: 0 auto;
-  float:right;
+  float: right;
 }
+
+
 
 .card {
   font-size: 90px;
@@ -80,6 +83,8 @@ h1 {
 
 .left{
   margin-left:40px;
+  float: left;
+  max-width: 40%;
 }
 .rules{
   text-align: center;
@@ -114,12 +119,46 @@ p{
   margin-top: 20px;
 }
 
+.scoreText{
+  font-size: 50px;
+}
+
+.player1Name {
+  font-size: 50px;
+  color:red;
+}
 .player1Score {
 font-size: 100px;
 margin-top: 30px;
+color: red;
 }
 
-footer {
+.welcome {
+  max-width: 100%;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  perspective: 1000px;
+  perspective-origin: 50% 400px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 40px;
+}
+
+ #playerName {
+   text-align: center;
+   display: flex;
+   padding: 10px;
+   margin: 0 auto;
+   font-size: 30px;
+ }
+
+  #start{
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+  }
+/*footer {
   display: flex;
   flex-wrap: wrap;
   max-width: 935px;
@@ -153,4 +192,4 @@ footer ul li:last-of-type {
 
 footer ul li a {
   color: black;
-}
+}*/

@@ -9,7 +9,42 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <h1>CELEBRITY FACE MATCHER</h1>
+  <h1>PRE WORK V2.0</h1>
+
+  <div class="welcome">
+    Take a few deep breaths and when you are ready <br>please enter your name below
+    <input type="text" id="playerName">
+    <button id="start">Submit</button>
+  </div>
+
+
+
+  <!-- <footer>
+    <ul>
+      <li><a href="#">About us</a></li>
+      <li><a href="#">Support</a></li>
+
+      <li>&copy; 2017 Celebrity Memory Game</li>
+    </ul>
+  </footer> -->
+
+  <section class = 'left'>
+    <div class = "rules">Objective</div>
+    <P>Collect the most matching pairs before the time runs out.</P>
+    <hr>
+    <p>Player 1 Name</p>
+    <P class = 'player1Name'></P>
+
+    <hr>
+    <p class = "scoreText">Your Current Score:</p>
+    <p class = "player1Score"></p>
+
+    <div class = "buttons">
+      <input type="button" value="Start Game" id="startGameButton">
+      <input type="button" value="Pause Game"id="pauseGameButton">
+      <input type="button" value="Restart Game"id="restartGameButton">
+    </div>
+  </section>
 
   <div class="content">
     <div class = "card unpaired"></div>
@@ -27,33 +62,8 @@
     <div class = "card unpaired"></div>
     <div class = "card unpaired"></div>
     <div class = "card unpaired"></div>
+    <div class = "card unpaired"></div>
   </div>
-
-  <footer>
-    <ul>
-      <li><a href="#">About us</a></li>
-      <li><a href="#">Support</a></li>
-
-      <li>&copy; 2017 Celebrity Memory Game</li>
-    </ul>
-  </footer>
-
-  <section class = 'left'>
-    <div class = "rules">Objective</div>
-    <P>Collect the most matching pairs before the time runs out.</P>
-    <hr>
-    <P class = 'player1Name'>Player 1 Name: </P>
-
-    <hr>
-    <p class = "scoreText">Your Current Score:</p>
-    <p class = "player1Score"></p>
-
-    <div class = "buttons">
-      <input type="button" value="Start Game" id="startGameButton">
-      <input type="button" value="Pause Game"id="pauseGameButton">
-      <input type="button" value="Restart Game"id="restartGameButton">
-    </div>
-  </section>
 
 
 </body>
