@@ -176,7 +176,26 @@ color: red;
     padding: 10px;
     font-size: 25px;
     margin-top: 20px;
+    float: left;
   }
+
+  #startmed{
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+    margin-top: 20px;
+    float: center;
+  }
+
+  #starthard{
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+    margin-top: 20px;
+    float: right;
+  }
+
+
 /*footer {
   display: flex;
   flex-wrap: wrap;

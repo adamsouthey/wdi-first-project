@@ -13,20 +13,20 @@ $(() => {
       $('.welcome').show();
       $('.winScreen').hide();
 
-      $(' #start').on('click', function() {
+      //Easy Difficulty
+      $('#start').on('click', function() {
         $('.welcome').hide();
         $('.content').show();
         $('.left').show();
+        //Med Difficulty
 
         const name = $('#playerName').val();
         $('.targetName').html(name);
-
+        app.shuffle();
       });
 
-
-      app.shuffle();
-
     },
+
     //Shuffle Deck
     shuffle: () => {
       let random = 0;
@@ -74,7 +74,7 @@ $(() => {
             $('.selected').each(function(){
               $(this).html('').removeClass('selected');
             });
-          }, 500);
+          }, 300);
         }
       }
     },
