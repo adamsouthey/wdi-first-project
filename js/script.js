@@ -10,6 +10,8 @@ $(() => {
     initialise: () => {
       $('.content').hide();
       $('.left').hide();
+      $('.welcome').show();
+      $('.winScreen').hide();
 
       $(' #start').on('click', function() {
         $('.welcome').hide();
@@ -78,7 +80,9 @@ $(() => {
     },
     winCondition: () => {
       if($('.unpaired').length === 0){
-        alert('You beat the game! Well done!');
+        $('.content').hide();
+        $('.left').hide();
+        $('.winScreen').show();
       }
 
     }

@@ -151,6 +151,12 @@ color: red;
   font-size: 40px;
 }
 
+.winScreen{
+  font-size: 200px;
+  text-align: center;
+  color: red;
+}
+
 .targetName{
   font-size: 60px;
   color: red;
@@ -169,6 +175,7 @@ color: red;
     text-align: center;
     padding: 10px;
     font-size: 25px;
+    margin-top: 20px;
   }
 /*footer {
   display: flex;
