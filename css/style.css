@@ -114,6 +114,11 @@ p{
   margin-top: 20px;
 }
 
+.player1Score {
+font-size: 100px;
+margin-top: 30px;
+}
+
 footer {
   display: flex;
   flex-wrap: wrap;

@@ -3,8 +3,8 @@ $(() => {
   // $card.on('click', () => {
   // console.log('FJBDSKGBSKFGNSDJKFBSJK');
   //   });
-
   // Define cards array
+let score = 0;
   let app = {
     cards: [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8],
     initialise: () => {
@@ -39,11 +39,15 @@ $(() => {
     checkForMatch: () => {
       if($('.selected').length == 2) {
         if($('.selected').first().data('cardValue') == $('.selected').last().data('cardValue')) {
-          //Remove Matching Pair From board
+          //Remove Matching Pair From board and add 1 to scoreboard
           $('.selected').each(function(){
             $(this).animate({opacity: 0}).removeClass('unpaired');
+            score += .5;
+            $('.player1Score').html(score);
 
           });
+
+
           $('.selected').each(function(){
             $(this).removeClass('selected');
           });
