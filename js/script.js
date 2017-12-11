@@ -11,17 +11,18 @@ $(() => {
       $('.content').hide();
       $('.left').hide();
 
-      const name = $('#playerName').val();
-      $('.player1Name').html(name);
       $(' #start').on('click', function() {
         $('.welcome').hide();
         $('.content').show();
         $('.left').show();
 
+        const name = $('#playerName').val();
+        $('.targetName').html(name);
+
       });
 
 
-  app.shuffle();
+      app.shuffle();
 
     },
     //Shuffle Deck
