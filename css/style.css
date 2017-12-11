@@ -16,22 +16,24 @@ h1 {
   font-size: 55px;
 }
 
+
 .content {
   display: flex;
   max-width: 60%;
-  padding: 20px;
+  padding: 15px;
   flex-wrap: wrap;
   justify-content: center;
   perspective: 1000px;
   perspective-origin: 40% 400px;
   margin: 0 auto;
   float: right;
+  margin-top: -10px;
 }
 
 
 
 .card {
-  font-size: 90px;
+  font-size: 80px;
   margin: 5px;
   border-radius: 10px;
   background: #0F0F3A;
@@ -39,7 +41,7 @@ h1 {
   text-align: center;
   line-height: 150px;
   font-weight: 600;
-  height: 210px;
+  height: 195px;
   width: 175px;
   transform: rotateX(30deg);
   text-shadow: 4px 4px 8px yellow;
@@ -84,7 +86,7 @@ h1 {
 .left{
   margin-left:40px;
   float: left;
-  max-width: 40%;
+  max-width: 30%;
 }
 .rules{
   text-align: center;
@@ -95,7 +97,7 @@ h1 {
 
 p{
   text-align: center;
-  font-size:25px;
+  font-size:26px;
 }
 
 .card p {
@@ -134,13 +136,13 @@ p{
   color:red;
 }
 .player1Score {
-font-size: 60px;
-margin-top: 30px;
-color: red;
+  font-size: 60px;
+  margin-top: 30px;
+  color: red;
 }
 
 .welcome {
-  max-width: 100%;
+  max-width: 80%;
   padding: 20px;
   flex-wrap: wrap;
   justify-content: center;
@@ -148,74 +150,102 @@ color: red;
   perspective-origin: 50% 400px;
   margin: 0 auto;
   text-align: center;
+    border-radius:50%;
+  border: 2px solid #000;
+  background: #800000;
+  background-image: radial-gradient(farthest-corner at 40px 40px,
+      #f90 0%, #13e 100%);
+}
+.welcome:hover{
+  background-image: radial-gradient(farthest-corner at 40px 40px,
+      #f60 0%, #33e 60%);
+}
+
+
+body .welcome{
+  margin-top: 80px;
+}
+
+.welcome p{
   font-size: 40px;
+  margin-bottom: 40px;
 }
 
 .winScreen{
-  max-width: 100%;
+  max-width: 60%;
+  margin: 0 auto;
   font-size: 100px;
   text-align: center;
   color: red;
+  background: url('https://wallup.net/wp-content/uploads/2016/05/25/339073-wood-timber-closeup-wooden_surface-texture-curved_wood.jpg');
+  border: 1px dashed #ddd;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 5px #ddd, 0 0 0 10px #fff, 0 0 2px 10px #eee;
 }
 
+
+ .winScreen p {
+   font-size: 40px;
+   color: #0000ff;
+ }
 
 .targetName{
   font-size: 60px;
   color: red;
 }
 
- #playerName {
-   text-align: center;
-   display: flex;
-   padding: 10px;
-   margin: 0 auto;
-   font-size: 30px;
-   margin-top: 50px
- }
+#playerName {
+  text-align: center;
+  display: flex;
+  padding: 10px;
+  margin: 0 auto;
+  font-size: 30px;
+  margin-top: 10px;
+  background-color: grey;
+}
 
-  #start{
-    text-align: center;
-    padding: 10px;
-    font-size: 25px;
-    margin-top: 20px;
+#start{
+  text-align: center;
+  padding: 10px;
+  font-size: 25px;
+  margin-top: 20px;
 
-  }
+}
 
 
 
 
 /*footer {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 935px;
-  font-size: 12px;
-  padding: 40px 20px;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 100;
-  justify-content: center;
+display: flex;
+flex-wrap: wrap;
+max-width: 935px;
+font-size: 12px;
+padding: 40px 20px;
+position: absolute;
+right: 0;
+bottom: 0;
+left: 100;
+justify-content: center;
 }
 
 footer ul {
-  display: flex;
-  font-size: 20px;
+display: flex;
+font-size: 20px;
 }
 
 footer ul li {
-  color: #999;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-right: 10px;
-  line-height: 1.5;
+color: #999;
+text-transform: uppercase;
+font-weight: 700;
+margin-right: 10px;
+line-height: 1.5;
 }
 
 footer ul li:last-of-type {
-  margin: 0 0 0 auto;
-  color: black;
-  text-transform: uppercase;
+margin: 0 0 0 auto;
+color: black;
+text-transform: uppercase;
 }
 
 footer ul li a {
-  color: black;
+color: black;
 }*/
