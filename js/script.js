@@ -1,14 +1,12 @@
 $(() => {
-  // var $card = $('.card');
-  // $card.on('click', () => {
-  // console.log('FJBDSKGBSKFGNSDJKFBSJK');
-  //   });
+
   // Define cards array
   let score = 0;
   let app = {
     cards: [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8],
     initialise: () => {
       $('.content').hide();
+
       $('.left').hide();
       $('.welcome').show();
       $('.winScreen').hide();
@@ -18,11 +16,10 @@ $(() => {
         $('.welcome').hide();
         $('.content').show();
         $('.left').show();
-        //Med Difficulty
-
         const name = $('#playerName').val();
         $('.targetName').html(name);
         app.shuffle();
+
       });
 
     },
@@ -40,6 +37,7 @@ $(() => {
       app.assignCards();
       console.log(`Shuffled Card Array: ${app.cards}`);
     },
+    //Assign Cards Data Values
     assignCards: () => {
       $('.card').each(function(index) {
         $(this).attr('data-card-value', app.cards[index]);
@@ -60,9 +58,7 @@ $(() => {
             $(this).animate({opacity: 0}).removeClass('unpaired');
             score += .5;
             $('.player1Score').html(score);
-
           });
-
 
           $('.selected').each(function(){
             $(this).removeClass('selected');
@@ -83,9 +79,14 @@ $(() => {
         $('.content').hide();
         $('.left').hide();
         $('.winScreen').show();
+
       }
 
     }
   };
   app.initialise();
+
+  $('.restartGameButton').on('click', function() {
+    location.reload();
+  });
 });

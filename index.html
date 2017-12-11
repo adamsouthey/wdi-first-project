@@ -14,14 +14,11 @@
   <div class="welcome">
     Take a few deep breaths and when you are ready <br>please enter your name below
     <input type="text" id="playerName">
-    <button id="start">Easy</button>
-    <button id="startmed">Med</button>
-    <button id="starthard">Hard</button>
+    <button id="start">SUBMIT</button>
+
   </div>
 
-  <div class="winScreen">
-    You completed the game within the time limit! Well done!
-  </div>
+
 
   <!-- <footer>
     <ul>
@@ -34,7 +31,7 @@
 
   <section class = 'left'>
     <div class = "rules">Objective</div>
-    <P>Collect the most matching pairs before the time runs out.</P>
+    <P>Collect the matching pairs before the time runs out.</P>
     <hr>
     <p class = 'targetName'></p>
 
@@ -43,7 +40,7 @@
     <p class = "player1Score"></p>
 
     <div class = "buttons">
-      <input type="button" value="Restart Game"id="restartGameButton">
+      <input type="button" value="Restart Game"class="restartGameButton">
     </div>
   </section>
 
@@ -64,6 +61,10 @@
     <div class = "card unpaired"></div>
     <div class = "card unpaired"></div>
     <div class = "card unpaired"></div>
+  </div>
+  <div class="winScreen">
+    You found the matching pairs!<br>You Win!
+      <input type="button" value="Restart Game" class="restartGameButton">
   </div>
 
 
