@@ -123,10 +123,20 @@ p{
   margin-top: 20px;
   padding: 10px;
 }
+
+.startGameButton{
+  font-size: 40px;
+  padding: 10px;
+  margin-top: 30px;
+  margin: 0 auto;
+  text-align: center;
+}
 .restartGameButton{
   font-size: 40px;
   padding: 10px;
   margin-top: 30px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .scoreText{
@@ -183,12 +193,25 @@ body .welcome{
   border: 1px dashed #ddd;
   box-shadow: 0 0 0 3px #fff, 0 0 0 5px #ddd, 0 0 0 10px #fff, 0 0 2px 10px #eee;
 }
-
-
  .winScreen p {
    font-size: 40px;
    color: #0000ff;
  }
+
+ .lossScreen{
+   max-width: 60%;
+   margin: 0 auto;
+   font-size: 100px;
+   text-align: center;
+   color: red;
+   background: url('https://wallup.net/wp-content/uploads/2016/05/25/339073-wood-timber-closeup-wooden_surface-texture-curved_wood.jpg');
+   border: 1px dashed #ddd;
+   box-shadow: 0 0 0 3px #fff, 0 0 0 5px #ddd, 0 0 0 10px #fff, 0 0 2px 10px #eee;
+ }
+  .lossScreen p {
+    font-size: 40px;
+    color: #0000ff;
+  }
 
 .targetName{
   font-size: 60px;

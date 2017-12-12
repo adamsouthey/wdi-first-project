@@ -2,7 +2,6 @@ $(() => {
 
   // Define cards array
   let score = 0;
-  let gameIsRunning = false;
 
   let app = {
     cards: [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8],
@@ -10,7 +9,8 @@ $(() => {
       $('.content').hide();
       $('.left').hide();
       $('.winScreen').hide();
-      $('.clock').show();
+      $('.lossScreen').hide();
+      $('.clock').hide();
       $('.welcome').show();
 
 
@@ -23,9 +23,9 @@ $(() => {
 
         const name = $('#playerName').val();
         $('.targetName').html(name);
-
         app.shuffle();
       });
+
     },
 
     //Shuffle Deck
@@ -91,7 +91,7 @@ $(() => {
 
     }
   };
-  app.initialise();
+
 
   $('.restartGameButton').on('click', function() {
     location.reload();
@@ -100,30 +100,40 @@ $(() => {
   //TIMER
   var timeoutHandle;
 
-  function countdown(minutes) {
-    var seconds = 30;
-    var mins = minutes
-    function tick() {
-      var counter = document.getElementById('timer');
-      var currentMinutes = mins-1
-      seconds--;
-      counter.innerHTML =
-      currentMinutes.toString() + " " + (seconds < 10 ? "" : "") + String(seconds);
-      if( seconds > 0 ) {
-        timeoutHandle=setTimeout(tick, 1000);
-      } else {
+  $('.startGameButton').on('click', function(){
+    function countdown(minutes) {
+      var seconds = 30;
+      var mins = minutes
+      function tick() {
+        var counter = document.getElementById('timer');
+        var currentMinutes = mins-1
+        seconds--;
+        counter.innerHTML =
+        currentMinutes.toString() + " " + (seconds < 10 ? "" : "") + String(seconds);
+        if( seconds > 0 ) {
+          timeoutHandle=setTimeout(tick, 1000);
+        } else {
 
-        if(mins > 1){
 
-          // countdown(mins-1);   never reach “00″ issue solved:Contributed by Victor Streithorst
-          setTimeout(function () { countdown(mins - 1); }, 1000);
+          if(mins > 1){
 
+            // countdown(mins-1);
+            setTimeout(function () {
+              countdown(mins - 1);
+            }, 1000);
+
+          }
+          if (seconds == 0){
+            $('.content').hide();
+            $('.left').hide();
+            $('.clock').hide();
+            $('.lossScreen').show();
+          }
         }
       }
+      tick();
     }
-    tick();
-  }
-
-  countdown(1);
-
+    countdown(1);
+  });
+  app.initialise();
 });

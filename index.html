@@ -12,11 +12,12 @@
 <header>
   <h1>How Good Is Your Memory?</h1>
   <div class = 'clock'>
-  <div id='timer'>TIME</div>
+  <div id='timer'></div>
 </header>
 
   <div class="welcome">
-    <p>When you are ready <br>please enter your name below</p>
+    <p>Please enter your name below</p>
+    <p>You will find the instructions on the next page<br></p>
     <input type="text" id="playerName">
     <button id="start">SUBMIT</button>
 
@@ -41,7 +42,8 @@
   <hr>
   <p class = "scoreText">Current Score:</p>
   <p class = "player1Score"></p>
-
+  <input type="button" value="Start Game" class="startGameButton">
+  <input type="button" value="Restart Game" class="restartGameButton">
 </section>
 
 <div class="content">
@@ -67,6 +69,13 @@
   <p> WINNER!!</p>
   <p> Congratulations on this incredible achievement!</p>
   <p> To play again, please press the restart game button</p>
+  <input type="button" value="Restart Game" class="restartGameButton">
+</div>
+
+<div class='lossScreen'>
+  <p> SORRY!TRY AGAIN!!</p>
+  <p> You didn't find the pairs in time!</p>
+  <p> To try again, please press the restart game button</p>
   <input type="button" value="Restart Game" class="restartGameButton">
 </div>
 
