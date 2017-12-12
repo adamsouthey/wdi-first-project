@@ -2,26 +2,30 @@ $(() => {
 
   // Define cards array
   let score = 0;
+  let gameIsRunning = false;
+
   let app = {
     cards: [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8],
     initialise: () => {
       $('.content').hide();
-
       $('.left').hide();
-      $('.welcome').show();
       $('.winScreen').hide();
+      $('.clock').show();
+      $('.welcome').show();
+
 
       //Easy Difficulty
       $('#start').on('click', function() {
         $('.welcome').hide();
         $('.content').show();
         $('.left').show();
+        $('.clock').show();
+
         const name = $('#playerName').val();
         $('.targetName').html(name);
+
         app.shuffle();
-
       });
-
     },
 
     //Shuffle Deck
@@ -46,7 +50,9 @@ $(() => {
     },
     clickHandlers: () => {
       $('.card').on('click', function () {
+
         $(this).html('<p>' + $(this).data('cardValue') + '</p>').addClass('selected');
+
         app.checkForMatch();
       });
     },
@@ -78,6 +84,7 @@ $(() => {
       if($('.unpaired').length === 0){
         $('.content').hide();
         $('.left').hide();
+        $('.clock').hide();
         $('.winScreen').show();
 
       }
@@ -89,4 +96,34 @@ $(() => {
   $('.restartGameButton').on('click', function() {
     location.reload();
   });
+
+  //TIMER
+  var timeoutHandle;
+
+  function countdown(minutes) {
+    var seconds = 30;
+    var mins = minutes
+    function tick() {
+      var counter = document.getElementById('timer');
+      var currentMinutes = mins-1
+      seconds--;
+      counter.innerHTML =
+      currentMinutes.toString() + " " + (seconds < 10 ? "" : "") + String(seconds);
+      if( seconds > 0 ) {
+        timeoutHandle=setTimeout(tick, 1000);
+      } else {
+
+        if(mins > 1){
+
+          // countdown(mins-1);   never reach “00″ issue solved:Contributed by Victor Streithorst
+          setTimeout(function () { countdown(mins - 1); }, 1000);
+
+        }
+      }
+    }
+    tick();
+  }
+
+  countdown(1);
+
 });

@@ -10,6 +10,8 @@ body{
   width: 100%;
 }
 
+
+
 h1 {
   font-family: 'Architects Daughter', cursive;
   text-align: center;
@@ -210,42 +212,14 @@ body .welcome{
   margin-top: 20px;
 
 }
-
-
-
-
-/*footer {
-display: flex;
-flex-wrap: wrap;
-max-width: 935px;
-font-size: 12px;
-padding: 40px 20px;
-position: absolute;
-right: 0;
-bottom: 0;
-left: 100;
-justify-content: center;
+.clock{
+  float: right;
+  margin-right: 40px;
+  margin-bottom: 80px;
+  text-align: center;
 }
+#timer{
+  font-size: 80px;
+  color: red;
 
-footer ul {
-display: flex;
-font-size: 20px;
 }
-
-footer ul li {
-color: #999;
-text-transform: uppercase;
-font-weight: 700;
-margin-right: 10px;
-line-height: 1.5;
-}
-
-footer ul li:last-of-type {
-margin: 0 0 0 auto;
-color: black;
-text-transform: uppercase;
-}
-
-footer ul li a {
-color: black;
-}*/
