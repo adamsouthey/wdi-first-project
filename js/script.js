@@ -16,7 +16,7 @@ $(() => {
 
 
       //Level 1
-      $('#start').on('click', function() {
+      $('#start').on('click', function reload() {
         $('.welcome').hide();
         $('.content').show();
         $('.left').show();
@@ -83,7 +83,7 @@ $(() => {
             $('.selected').each(function(){
               $(this).html('').removeClass('selected');
             });
-          }, 300);
+          }, 150);
         }
       }
     },
