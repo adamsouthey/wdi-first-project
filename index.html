@@ -9,77 +9,80 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<header>
-  <h1>How Good Is Your Memory?</h1>
-  <div class = 'clock'>
-  <div id='timer'></div>
-</header>
+  <header>
+    <h1>How Good Is Your Memory?</h1>
+
+  </header>
 
   <div class="welcome">
     <p>Please enter your name below</p>
     <p>You will find the instructions on the next page<br></p>
-    <input type="text" id="playerName">
-    <button id="start">SUBMIT</button>
-
+    <input type="text" id="playerName" placeholder='Your Name Here'>
+    <div class = 'levelButtons'>
+      <button id="start">Level 1</button>
+      <button id="start">Level 2</button>
+      <button id="start">Level 3</button>
+    </div>
   </div>
 
 
-  <!-- <footer>
-  <ul>
-  <li><a href="#">About us</a></li>
-  <li><a href="#">Support</a></li>
-
-  <li>&copy; 2017 Celebrity Memory Game</li>
-</ul>
-</footer> -->
-
-<section class = 'left'>
-  <div class = "rules">Instructions</div>
-  <P>Collect 8 matching pairs before the time runs out<br> 1 point is awarded per matching pair <br> The time limit is 30 seconds and is displayed in the top left hand corner of the screen</P>
-  <hr>
-  <p class = 'targetName'></p>
-
-  <hr>
-  <p class = "scoreText">Current Score</p>
-  <p class = "player1Score"></p>
-  <input type="button" value="Start Game" class="startGameButton">
-  <input type="button" value="Restart Game" class="restartGameButton">
-</section>
-
-<div class="content">
-  <div class = "card unpaired"></div>
-  <div class = "card unpaired "></div>
-  <div class = "card unpaired"></div>
-  <div class = "card unpaired"></div>
-  <div class = "card unpaired"></div>
-  <div class = "card unpaired"></div>
-  <div class = "card unpaired"></div>
-  <div class = "card unpaired"></div>
-  <div class = "card unpaired"></div>
-  <div class = "card unpaired"></div>
-  <div class = "card unpaired"></div>
-  <div class = "card unpaired"></div>
-  <div class = "card unpaired"></div>
-  <div class = "card unpaired"></div>
-  <div class = "card unpaired"></div>
-  <div class = "card unpaired"></div>
-</div>
-
-<div class="winScreen">
-  <p> WINNER!!</p>
-  <p> Congratulations on this incredible achievement!</p>
-  <p> To play again, please press the restart game button</p>
-  <input type="button" value="Restart Game" class="restartGameButton">
-</div>
-
-<div class='lossScreen'>
-  <p> SORRY!TRY AGAIN!!</p>
-  <p> You didn't find the pairs in time!</p>
-  <p> To try again, please press the restart game button</p>
-  <input type="button" value="Restart Game" class="restartGameButton">
-</div>
 
 
+  <section class = 'left'>
+    <div class = "rules">Instructions</div>
+    <P>Collect 8 matching pairs before the time runs out<br>Time Limit = 60 seconds<br>Incorrect Guess = 5 second penalty<br>Correct Guess = 3 second reward</P>
+    <hr>
+    <p class = 'targetName'></p>
 
-</body>
-</html>
+    <hr>
+    <div class = 'playerScoreBox'>
+
+      <p class = "scoreText">Pairs Matched</p>
+      <p class = "player1Score"></p>
+      <div class = 'clock'>
+        <div id='timer'></div>
+      </div>
+    <div class = 'buttons'>
+      <input type="button" value="Start Game" class="startGameButton" id='startGameButton'>
+      <input type="button" value="Restart Game" class="restartGameButton" id='restartGameButton'>
+    </div>
+      </section>
+
+
+      <div class="content">
+        <div class = "card unpaired"></div>
+        <div class = "card unpaired "></div>
+        <div class = "card unpaired"></div>
+        <div class = "card unpaired"></div>
+        <div class = "card unpaired"></div>
+        <div class = "card unpaired"></div>
+        <div class = "card unpaired"></div>
+        <div class = "card unpaired"></div>
+        <div class = "card unpaired"></div>
+        <div class = "card unpaired"></div>
+        <div class = "card unpaired"></div>
+        <div class = "card unpaired"></div>
+        <div class = "card unpaired"></div>
+        <div class = "card unpaired"></div>
+        <div class = "card unpaired"></div>
+        <div class = "card unpaired"></div>
+      </div>
+
+      <div class="winScreen">
+        <p> WINNER!!</p>
+        <p> Congratulations on this incredible achievement!</p>
+        <p> To play again, please press the restart game button</p>
+        <input type="button" value="Restart Game" class="restartGameButton">
+      </div>
+
+      <div class='lossScreen'>
+        <p> TRY AGAIN!!</p>
+        <p> You didn't find the pairs in time!</p>
+        <p> To try again, please press the restart game button</p>
+        <input type="button" value="Restart Game" class="restartGameButton">
+      </div>
+
+
+
+    </body>
+    </html>

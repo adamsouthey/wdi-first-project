@@ -15,7 +15,7 @@ $(() => {
       $('.welcome').show();
 
 
-      //Easy Difficulty
+      //Level 1
       $('#start').on('click', function() {
         $('.welcome').hide();
         $('.content').show();
@@ -68,6 +68,7 @@ $(() => {
           $('.selected').each(function(){
             $(this).animate({opacity: 0}).removeClass('unpaired');
             score += .5;
+            app.timeReward();
             $('.player1Score').html(score + ' / 8');
           });
 
@@ -76,7 +77,7 @@ $(() => {
           });
           app.winCondition();
         } else {
-          //Punish User Time penalty & Flip back over
+          //Punish User with Time penalty & Flip back over
           app.timePenalty();
           setTimeout(function(){
             $('.selected').each(function(){
@@ -96,10 +97,16 @@ $(() => {
       }
 
     },
-    //Time Penalty Functions
+    //Time Penalty Function
     timePenalty: () => {
-      seconds -= 5;
+      seconds -= 4;
+    },
+    //Time Reward Function
+    timeReward: () => {
+      seconds += 3;
     }
+
+
 
   };
 
@@ -112,6 +119,7 @@ $(() => {
   var timeoutHandle;
 
   $('.startGameButton').on('click', function(){
+
     function countdown(minutes) {
 
       var mins = minutes
@@ -134,7 +142,7 @@ $(() => {
             }, 1000);
 
           }
-          if (seconds == 0){
+          if (seconds <= 0){
             $('.content').hide();
             $('.left').hide();
             $('.clock').hide();

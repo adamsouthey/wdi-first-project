@@ -88,7 +88,7 @@ h1 {
 .left{
   margin-left:40px;
   float: left;
-  max-width: 30%;
+  max-width: 40%;
 }
 .rules{
   text-align: center;
@@ -118,25 +118,29 @@ p{
 }
 
 .buttons {
+  margin-top: 200px;
   text-align: center;
-  font-size: 40px;
-  margin-top: 20px;
+  font-size: 20px;
   padding: 10px;
 }
+.buttons{
+  display: flex;
+}
+#startGameButton{
+  font-size: 20px;
+  margin-top: 10px;
+  text-align: center;
 
-.startGameButton{
-  font-size: 40px;
-  padding: 10px;
-  margin-top: 30px;
+  flex-wrap: wrap;
   margin: 0 auto;
-  text-align: center;
+
 }
-.restartGameButton{
-  font-size: 40px;
-  padding: 10px;
-  margin-top: 30px;
-  margin: 0 auto;
+#restartGameButton{
+  font-size: 20px;
+  margin-top: 10px;
+  flex-wrap: wrap;
   text-align: center;
+margin: 0 auto;
 }
 
 .scoreText{
@@ -148,9 +152,15 @@ p{
   color:red;
 }
 .player1Score {
-  font-size: 80px;
+  font-size: 40px;
   margin-top: 10px;
   color: white;
+}
+
+#timer{
+  font-size: 40px;
+  color: red;
+
 }
 
 .welcome {
@@ -214,7 +224,7 @@ body .welcome{
   }
 
 .targetName{
-  font-size: 60px;
+  font-size: 20px;
   color: red;
 }
 
@@ -228,6 +238,13 @@ body .welcome{
   background-color: grey;
 }
 
+.levelButtons{
+  text-align: center;
+  padding: 10px;
+  font-size: 25px;
+  margin-top: 20px;
+}
+
 #start{
   text-align: center;
   padding: 10px;
@@ -236,13 +253,8 @@ body .welcome{
 
 }
 .clock{
-  float: right;
-  margin-right: 40px;
-  margin-bottom: 80px;
+float: right;
+  margin-right: 20px;
+  margin-bottom: 20px;
   text-align: center;
-}
-#timer{
-  font-size: 80px;
-  color: red;
-
 }
