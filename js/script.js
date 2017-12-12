@@ -99,7 +99,7 @@ $(() => {
     },
     //Time Penalty Function
     timePenalty: () => {
-      seconds -= 4;
+      seconds -= 5;
     },
     //Time Reward Function
     timeReward: () => {
@@ -112,6 +112,12 @@ $(() => {
 
 
   $('.restartGameButton').on('click', function() {
+    location.reload();
+  });
+  $('.restartGameButtonLossScreen').on('click', function() {
+    location.reload();
+  });
+  $('.restartGameButtonWinScreen').on('click', function() {
     location.reload();
   });
 

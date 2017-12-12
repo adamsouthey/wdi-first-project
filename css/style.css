@@ -137,8 +137,25 @@ p{
   margin-top: 10px;
   flex-wrap: wrap;
   text-align: center;
+  margin: 0 auto;
+}
+
+.restartGameButtonWinScreen{
+font-size: 30px;
+margin-top: 10px;
+text-align: center;
 margin: 0 auto;
 }
+
+.restartGameButtonLossScreen{
+font-size: 30px;
+margin-top: 10px;
+
+text-align: center;
+margin: 0 auto;
+}
+
+
 .currentPlayer{
   font-size: 40px;
   margin: 0px;
