@@ -118,14 +118,11 @@ p{
 }
 
 .buttons {
-  margin-top: 200px;
   text-align: center;
-  font-size: 20px;
-  padding: 10px;
+  font-size: 30px;
+
 }
-.buttons{
-  display: flex;
-}
+
 #startGameButton{
   font-size: 20px;
   margin-top: 10px;
@@ -142,9 +139,14 @@ p{
   text-align: center;
 margin: 0 auto;
 }
-
+.currentPlayer{
+  font-size: 40px;
+  margin: 0px;
+}
 .scoreText{
   font-size: 40px;
+  margin: 0px;
+
 }
 
 .player1Name {
@@ -153,13 +155,14 @@ margin: 0 auto;
 }
 .player1Score {
   font-size: 40px;
-  margin-top: 10px;
+  margin: 0px;
   color: white;
+
 }
 
 #timer{
   font-size: 40px;
-  color: red;
+  color: white;
 
 }
 
@@ -224,8 +227,9 @@ body .welcome{
   }
 
 .targetName{
-  font-size: 20px;
-  color: red;
+  font-size: 40px;
+  color: white;
+  margin: 0px;
 }
 
 #playerName {
@@ -253,8 +257,6 @@ body .welcome{
 
 }
 .clock{
-float: right;
-  margin-right: 20px;
-  margin-bottom: 20px;
   text-align: center;
+  color: white;
 }

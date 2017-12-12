@@ -30,23 +30,26 @@
 
   <section class = 'left'>
     <div class = "rules">Instructions</div>
-    <P>Collect 8 matching pairs before the time runs out<br>Time Limit = 60 seconds<br>Incorrect Guess = 5 second penalty<br>Correct Guess = 3 second reward</P>
+    <P>Collect 8 matching pairs before the time runs out<br>Time Limit = 60 seconds<br>Incorrect Guess = 5 second penalty<br>Correct Guess = 3 second reward<br>Press start game to start the game</P>
     <hr>
+    <p class = 'currentPlayer'>Current Player</p>
     <p class = 'targetName'></p>
 
-    <hr>
+
     <div class = 'playerScoreBox'>
 
       <p class = "scoreText">Pairs Matched</p>
-      <p class = "player1Score"></p>
-      <div class = 'clock'>
-        <div id='timer'></div>
+        <p class = "player1Score">0 /8 </p>
+
+        <p class = "scoreText">Time Remaining</p>
+      <div class = 'clock' id='timer'>60</div>
       </div>
     <div class = 'buttons'>
       <input type="button" value="Start Game" class="startGameButton" id='startGameButton'>
       <input type="button" value="Restart Game" class="restartGameButton" id='restartGameButton'>
-    </div>
-      </section>
+
+  </section>
+
 
 
       <div class="content">
