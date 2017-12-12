@@ -148,9 +148,9 @@ p{
   color:red;
 }
 .player1Score {
-  font-size: 60px;
-  margin-top: 30px;
-  color: red;
+  font-size: 80px;
+  margin-top: 10px;
+  color: white;
 }
 
 .welcome {

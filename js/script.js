@@ -2,6 +2,7 @@ $(() => {
 
   // Define cards array
   let score = 0;
+  var seconds = 60;
 
   let app = {
     cards: [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8],
@@ -48,6 +49,8 @@ $(() => {
       });
       app.clickHandlers();
     },
+
+    //Assign card value ID + selected class to card then checkMatch
     clickHandlers: () => {
       $('.card').on('click', function () {
 
@@ -56,6 +59,8 @@ $(() => {
         app.checkForMatch();
       });
     },
+
+    //Check for Match Function
     checkForMatch: () => {
       if($('.selected').length == 2) {
         if($('.selected').first().data('cardValue') == $('.selected').last().data('cardValue')) {
@@ -63,7 +68,7 @@ $(() => {
           $('.selected').each(function(){
             $(this).animate({opacity: 0}).removeClass('unpaired');
             score += .5;
-            $('.player1Score').html(score);
+            $('.player1Score').html(score + ' / 8');
           });
 
           $('.selected').each(function(){
@@ -71,7 +76,8 @@ $(() => {
           });
           app.winCondition();
         } else {
-          //Flip back over
+          //Punish User Time penalty & Flip back over
+          app.timePenalty();
           setTimeout(function(){
             $('.selected').each(function(){
               $(this).html('').removeClass('selected');
@@ -80,16 +86,21 @@ $(() => {
         }
       }
     },
+    // Win Conditions Show Win Screen
     winCondition: () => {
       if($('.unpaired').length === 0){
         $('.content').hide();
         $('.left').hide();
         $('.clock').hide();
         $('.winScreen').show();
-
       }
 
+    },
+    //Time Penalty Functions
+    timePenalty: () => {
+      seconds -= 5;
     }
+
   };
 
 
@@ -102,7 +113,7 @@ $(() => {
 
   $('.startGameButton').on('click', function(){
     function countdown(minutes) {
-      var seconds = 30;
+
       var mins = minutes
       function tick() {
         var counter = document.getElementById('timer');
