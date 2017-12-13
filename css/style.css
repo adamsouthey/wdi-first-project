@@ -102,6 +102,13 @@ p{
   font-size:26px;
 }
 
+.startGameTag{
+  color: yellow;
+  font-size:30px;
+  margin: 0px;
+  text-transform: uppercase;
+}
+
 .card p {
   font-size: 90px;
   margin: 5px;
@@ -124,7 +131,7 @@ p{
 }
 
 #startGameButton{
-  font-size: 20px;
+  font-size: 40px;
   margin-top: 10px;
   text-align: center;
 
@@ -133,7 +140,7 @@ p{
 
 }
 #restartGameButton{
-  font-size: 20px;
+  font-size: 40px;
   margin-top: 10px;
   flex-wrap: wrap;
   text-align: center;
@@ -262,21 +269,12 @@ body .welcome{
 .levelButtons{
   text-align: center;
   padding: 10px;
-  font-size: 25px;
+  font-size: 55px;
   margin-top: 20px;
 }
 
-#start{
-  text-align: center;
-  padding: 10px;
-  font-size: 25px;
-  margin-top: 20px;
-}
-#start2{
-  text-align: center;
-  padding: 10px;
-  font-size: 25px;
-  margin-top: 20px;
+.start{
+  font-size: 30px;
 }
 .clock{
   text-align: center;

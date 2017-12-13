@@ -2,11 +2,15 @@ $(() => {
 
   const levels = {
     '1': {
-      timePenalty: 5,
+      timePenalty: 3,
       correctGuess: 3
     },
     '2': {
-      timePenalty: 7,
+      timePenalty: 6,
+      correctGuess: 3
+    },
+    '3': {
+      timePenalty: 8,
       correctGuess: 3
     }
   };
@@ -19,6 +23,7 @@ $(() => {
   let app = {
     cards: [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8],
     currentLevel: null,
+    practiceMode: true,
     initialise: () => {
       $('.content').hide();
       $('.left').hide();
@@ -41,9 +46,12 @@ $(() => {
         $('.clock').show();
         const name = $('#playerName').val();
         $('.targetName').html(name);
+        app.practiceMode === true;
         app.shuffle();
+
+
       });
-      
+
     },
 
     //Shuffle Deck
@@ -62,6 +70,7 @@ $(() => {
 
     //Assign Cards Data Values
     assignCards: () => {
+
       $('.card').each(function(index) {
         console.log(app.cards[index]);
         $(this).attr('data-card-value', app.cards[index]);
@@ -81,25 +90,30 @@ $(() => {
 
     //Check for Match Function
     checkForMatch: () => {
-      if(app.practiceMode) return false;
+
+      // if(app.practiceMode) return false;
 
       if($('.selected').length == 2) {
         if($('.selected').first().data('cardValue') == $('.selected').last().data('cardValue')) {
           //Remove Matching Pair From board and add 1 to scoreboard
           $('.selected').each(function(){
             $(this).animate({opacity: 0}).removeClass('unpaired');
-            score += .5;
-            app.timeReward();
-            $('.player1Score').html(score + ' / 8');
+
+            if(!app.practiceMode) {
+              score += .5;
+              app.timeReward();
+              $('.player1Score').html(score + ' / 8');
+            }
+
           });
 
           $('.selected').each(function(){
             $(this).removeClass('selected');
           });
-          app.winCondition();
+
+          if(!app.practiceMode) app.winCondition();
         } else {
-          //Punish User with Time penalty & Flip back over
-          app.timePenalty();
+          if(!app.practiceMode) app.timePenalty();
           setTimeout(function(){
             $('.selected').each(function(){
               $(this).html('').removeClass('selected');
@@ -108,6 +122,10 @@ $(() => {
         }
       }
     },
+
+
+
+
     // Win Conditions Show Win Screen
     winCondition: () => {
       if($('.unpaired').length === 0){
@@ -118,6 +136,7 @@ $(() => {
       }
 
     },
+
     //Time Penalty Function
     timePenalty: () => {
       seconds -= app.currentLevel.timePenalty;
@@ -146,7 +165,9 @@ $(() => {
   var timeoutHandle;
 
   $('.startGameButton').on('click', function(){
+    app.practiceMode == false;
     app.shuffle();
+
 
     function countdown(minutes) {
 
