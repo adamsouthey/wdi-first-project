@@ -271,7 +271,12 @@ body .welcome{
   padding: 10px;
   font-size: 25px;
   margin-top: 20px;
-
+}
+#start2{
+  text-align: center;
+  padding: 10px;
+  font-size: 25px;
+  margin-top: 20px;
 }
 .clock{
   text-align: center;

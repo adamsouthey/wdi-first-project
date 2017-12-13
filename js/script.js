@@ -1,11 +1,24 @@
 $(() => {
 
+  const levels = {
+    '1': {
+      timePenalty: 5,
+      correctGuess: 3
+    },
+    '2': {
+      timePenalty: 7,
+      correctGuess: 3
+    }
+  };
+
   // Define cards array
   let score = 0;
   var seconds = 60;
 
+
   let app = {
     cards: [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8],
+    currentLevel: null,
     initialise: () => {
       $('.content').hide();
       $('.left').hide();
@@ -15,18 +28,22 @@ $(() => {
       $('.welcome').show();
 
 
-      //Level 1
-      $('#start').on('click', function reload() {
+      //Start Game
+      $('.start').on('click', function reload(e) {
+        const chosenLevel = $(e.target).data('level');
+        console.log(chosenLevel);
+        app.currentLevel = levels[chosenLevel];
+        console.log(app.currentLevel);
+
         $('.welcome').hide();
         $('.content').show();
         $('.left').show();
         $('.clock').show();
-
         const name = $('#playerName').val();
         $('.targetName').html(name);
         app.shuffle();
       });
-
+      
     },
 
     //Shuffle Deck
@@ -42,9 +59,11 @@ $(() => {
       app.assignCards();
       console.log(`Shuffled Card Array: ${app.cards}`);
     },
+
     //Assign Cards Data Values
     assignCards: () => {
       $('.card').each(function(index) {
+        console.log(app.cards[index]);
         $(this).attr('data-card-value', app.cards[index]);
       });
       app.clickHandlers();
@@ -53,8 +72,8 @@ $(() => {
     //Assign card value ID + selected class to card then checkMatch
     clickHandlers: () => {
       $('.card').on('click', function () {
-
-        $(this).html('<p>' + $(this).data('cardValue') + '</p>').addClass('selected');
+        const num = $(this).attr('data-card-value');
+        $(this).html('<p>' + num + '</p>').addClass('selected');
 
         app.checkForMatch();
       });
@@ -62,6 +81,8 @@ $(() => {
 
     //Check for Match Function
     checkForMatch: () => {
+      if(app.practiceMode) return false;
+
       if($('.selected').length == 2) {
         if($('.selected').first().data('cardValue') == $('.selected').last().data('cardValue')) {
           //Remove Matching Pair From board and add 1 to scoreboard
@@ -99,11 +120,11 @@ $(() => {
     },
     //Time Penalty Function
     timePenalty: () => {
-      seconds -= 5;
+      seconds -= app.currentLevel.timePenalty;
     },
     //Time Reward Function
     timeReward: () => {
-      seconds += 3;
+      seconds += app.currentLevel.correctGuess;
     }
 
 
@@ -125,6 +146,7 @@ $(() => {
   var timeoutHandle;
 
   $('.startGameButton').on('click', function(){
+    app.shuffle();
 
     function countdown(minutes) {
 
