@@ -1,6 +1,6 @@
 $(() => {
 
-const levels = {
+  const levels = {
     '1': {
       timePenalty: 1
 
@@ -30,50 +30,35 @@ const levels = {
     currentLevel: null,
     initialise: () => {
       $('.content, .left, .winScreen, .lossScreen, .clock').hide();
-      // $('.left').hide();
-      // $('.winScreen').hide();
-      // $('.lossScreen').hide();
-      // $('.clock').hide();
       $('.welcome').show();
 
-      //Start Game
+
+      //Start Game Button from Welcome Screen. ChosenLevel = targetClick, level1 = data value 1 - apply timePenalty(Key): 1(value)
       $('.start').on('click', function reload(e) {
 
-
-        // seconds = 60;
         const chosenLevel = $(e.target).data('level');
         $('.restart-current-level').data('level', chosenLevel);
         app.currentLevel = levels[chosenLevel];
 
         $('.welcome, .content, .winScreen, .lossScreen').hide();
         $('.clock, .left').show();
-        // $('.content').hide();
-        // $('.winScreen').hide();
-        // $('.lossScreen').hide();
-        // $('.left').show();
+
 
         const name = $('#playerName').val();
         $('.targetName').html(name);
         app.shuffle();
       });
 
+      //Restart Level from lossScreen
       $('.restart-current-level').on('click', function reload(e) {
-
-
-        // seconds = 60;
         const chosenLevel = $(e.target).data('level');
         app.currentLevel = levels[chosenLevel];
 
         $('.welcome, .content, .winScreen, .lossScreen').hide();
-        // $('.content').hide();
-        // $('.left').show();
-        // $('.winScreen').hide();
-        // $('.lossScreen').hide();
         $('.clock, .left').show();
 
         seconds = 60;
         score = 0;
-
 
         $('.clock').html('60');
         const name = $('#playerName').val();
@@ -150,9 +135,6 @@ const levels = {
       }
     },
 
-
-
-
     // Win Conditions Show Win Screen
     winCondition: () => {
       if($('.unpaired').length === 0){
@@ -175,14 +157,39 @@ const levels = {
 
     }
 
-
-
   };
 
 
   $('.restart').on('click', function() {
     location.reload();
   });
+
+
+  //? Animation
+  $(function animation() {
+    setInterval(function() {
+      $('.question-image').animate({ left: $(window).width() + 'px' }, 8000, 'linear', function() {
+        $(this).css({ left: - $(this).width() + 'px' });
+      });
+    }, 10);
+  });
+
+  $(function animation() {
+    setInterval(function() {
+      $('.question-image').animate({ left: $(window).width() + 'px' }, 3000, 'linear', function() {
+        $(this).css({ left: - $(this).width() + 'px' });
+      });
+    }, 10);
+  });
+  $(function animation() {
+    setInterval(function() {
+      $('.question-image').animate({ left: $(window).width() + 'px' }, 1000, 'linear', function() {
+        $(this).css({ left: - $(this).width() + 'px' });
+      });
+    }, 10);
+  });
+
+
 
 
   //TIMER

@@ -26,7 +26,6 @@
       <button class="start" data-level="4">Level 4</button>
       <button class="start" data-level="5">Level 5</button>
     </div>
-
   </div>
 
 
@@ -36,7 +35,7 @@
 
   <section class = 'left'>
     <div class = "rules">Instructions</div>
-    <P>Collect 8 matching pairs before the time runs out<br>The higher the difficulty, the less time you have!<br></P>
+    <P>Collect 8 matching pairs before the time runs out<br>The harder the difficulty, the less time you have!<br></P>
     <p class = 'startGameTag'>Press start game to start the timer!</p>
 
     <p class = 'currentPlayer'>Current Player</p>
@@ -54,7 +53,9 @@
     <div class = 'buttons'>
       <input type="button" value="Start Game" class="startGameButton" id='startGameButton'>
 
-
+      <div class="question">
+      <img class="question-image" src="https://memegenerator.net/img/instances/67167732.jpg" alt="questionMark">
+      </div>
     </section>
 
 
@@ -80,17 +81,17 @@
 
     <div class="winScreen">
       <p> WINNER!!</p>
-      <p> Congratulations on this incredible achievement!</p>
-      <p> To play again, press Homepage and select the next level</p>
+      <p> Congratulations on your achievement!</p>
+      <p> Press Homepage and select the next level</p>
       <button class="restart">Homepage</button>
     </div>
 
     <div class='lossScreen'>
-      <p> Good effort!!</p>
+      <p> Unlucky!!</p>
       <p> You didn't find the pairs in time!</p>
       <p> Please choose from the following options</p>
-      <!-- <input type="button" value="Restart Game" class="restartGameButtonLossScreen"> -->
-      <button class="restart-current-level" data-level="1">Retry Current Level</button>
+
+      <button class="restart-current-level" data-level="1">Retry Level</button>
       <button class="restart">Homepage</button>
     </div>
 

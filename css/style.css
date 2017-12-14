@@ -16,292 +16,7 @@ body{
   }
 }
 
-h1 {
-  font-family: 'Architects Daughter', cursive;
-  text-align: center;
-  font-size: 55px;
-}
-@media only screen and (max-width: 735px) {
-  h1 {
-    font-family: 'Architects Daughter', cursive;
-    text-align: center;
-    font-size: 20px;
-  }
-}
-
-
-.content {
-  display: flex;
-  max-width: 60%;
-  padding: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
-  perspective: 1000px;
-  perspective-origin: 40% 400px;
-  margin: 0 auto;
-  float: right;
-  margin-top: -10px;
-}
-
-@media only screen and (max-width: 735px) {
-  .content {
-    display: flex;
-    max-width: 100%;
-    padding: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-    perspective: 1000px;
-    perspective-origin: 40% 400px;
-    margin: 0 auto;
-    float: right;
-    margin-top: 220px;
-    font-size: 10px;
-  }
-}
-
-
-.card {
-  font-size: 80px;
-  margin: 5px;
-  border-radius: 10px;
-  background: #0F0F3A;
-  color: white;
-  text-align: center;
-  line-height: 150px;
-  font-weight: 600;
-  height: 195px;
-  width: 160px;
-  transform: rotateX(30deg);
-  text-shadow: 4px 4px 8px yellow;
-}
-
-@media only screen and (max-width: 735px) {
-  .card {
-    font-size: 10px;
-    height: 50px;
-    width: 50px;
-  }
-}
-
-@media only screen and (max-width: 735px) {
-  .unpaired {
-    font-size: 10px;
-
-  }
-}
-
-
-
-.card:hover {
-  -webkit-animation-name: pulse;
-  animation-name: pulse;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-}
-
-@media only screen and (max-width: 735px) {
-  .card:hover {
-    font-size: 10px;
-    height: 50px;
-    width: 50px;
-    -webkit-animation-name: pulse;
-    animation-name: pulse;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-  }
-}
-
-
-
-@-webkit-keyframes pulse {
-  25% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-  75% {
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
-  }
-}
-
-@keyframes pulse {
-  25% {
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-  75% {
-    -webkit-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    transform: scale(0.8);
-  }
-}
-
-.left{
-  margin-left:40px;
-  float: left;
-  max-width: 35%;
-}
-@media only screen and (max-width: 735px) {
-  .left {
-
-    font-size: 10px;
-    height: 10px;
-    max-width: 100%;
-      margin-left:70px;
-
-    float: center;
-    margin-right: 70px;
-  }
-}
-
-
-.rules{
-  text-align: center;
-  font-size: 50px;
-  font-family: 'Architects Daughter', cursive;
-  }
-
-  @media only screen and (max-width: 735px) {
-    .rules{
-    text-align:center;
-    margin: 0 auto;
-    font-size: 10px;
-    font-family: 'Architects Daughter', cursive;
-    }
-  }
-
-
-
-@media only screen and (max-width: 735px) {
-.left p{
-  text-align: center;
-  font-size:10px;
-}
-}
-
-
-
-p{
-  text-align: center;
-  font-size:26px;
-}
-
-
-
-
-.startGameTag{
-  color: yellow;
-  font-size:40px;
-  margin: 0px;
-  text-transform: uppercase;
-}
-
-.card p {
-  font-size: 90px;
-  margin: 5px;
-  border-radius: 10px;
-  background: #0F0F3A;
-  color: white;
-  text-align: center;
-  line-height: 150px;
-  font-weight: 600;
-  height: 200px;
-  width: 175px;
-  transform: rotateX(30deg);
-  text-shadow: 4px 4px 8px yellow;
-}
-
-@media only screen and (max-width: 735px) {
-  .card p{
-    font-size: 40px;
-    margin: px;
-    border-radius: 10px;
-    background: #0F0F3A;
-    color: white;
-    text-align: center;
-    line-height: 50px;
-    font-weight: 600;
-    height: 20px;
-    width: 30px;
-    transform: rotateX(30deg);
-    text-shadow: 4px 4px 8px yellow;
-  }
-}
-
-
-.buttons {
-  text-align: center;
-  font-size: 30px;
-
-}
-
-.restart-current-level{
-  font-size: 25px;
-  margin-bottom: 100px;
-}
-
-#startGameButton{
-  font-size: 40px;
-  margin-top: 10px;
-  text-align: center;
-
-  flex-wrap: wrap;
-  margin: 0 auto;
-}
-
-@media only screen and (max-width: 735px) {
-#startGameButton {
-
-  font-size: 15px;
-  margin-top: 10px;
-  text-align: center;
-  margin: 0 auto;
-}
-}
-
-
-#restartGameButton{
-  font-size: 40px;
-  margin-top: 10px;
-  flex-wrap: wrap;
-  text-align: center;
-  margin: 0 auto;
-}
-
-
-
-.currentPlayer{
-  font-size: 40px;
-  margin: 0px;
-}
-.scoreText{
-  font-size: 40px;
-  margin: 0px;
-
-}
-
-.player1Score {
-  font-size: 40px;
-  margin: 0px;
-  color: white;
-
-}
-
-#timer{
-  font-size: 50px;
-  color: white;
-
-}
-
+/*WELCOME SCREEN*/
 .welcome {
   max-width: 80%;
   padding: 20px;
@@ -334,219 +49,528 @@ p{
       background: #800000;
       background-image: radial-gradient(farthest-corner at 40px 40px,
         #f90 0%, #13e 100%);
-    }
-  }
-
-
-
-  .welcome:hover{
-    background-image: radial-gradient(farthest-corner at 40px 40px,
-      #f60 0%, #33e 60%);
+      }
     }
 
-
-    body .welcome{
-      margin-top: 120px;
-    }
-    @media only screen and (max-width: 735px) {
-      body .welcome {
-      margin-top: 20px;
-  }
-    }
-
-    .welcome p{
-      font-size: 25px;
-      margin-bottom: 40px;
-      margin: 20px;
-      text-transform: uppercase;
-    }
-
-    @media only screen and (max-width: 735px) {
-      .welcome p {
-        font-size: 15px;
-        margin-bottom: 10px;
-        padding: 10px;
-  }
-    }
-
-
-
-    .winScreen{
-      margin: 0 auto;
-      max-width: 80%;
-      padding: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-      perspective: 1000px;
-      perspective-origin: 50% 400px;
-      margin: 0 auto;
-      text-align: center;
-      border-radius:50%;
-      border: 2px solid #000;
-      background: #800000;
+    .welcome:hover{
       background-image: radial-gradient(farthest-corner at 40px 40px,
-        #f90 0%, #13e 100%);
-    }
-    .winScreen p {
-      font-size: 40px;
-      color: #0000ff;
-    }
-
-    .lossScreen{
-      margin: 0 auto;
-      max-width: 80%;
-      padding: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-      perspective: 1000px;
-      perspective-origin: 50% 400px;
-      margin: 0 auto;
-      text-align: center;
-      border-radius:50%;
-      border: 2px solid #000;
-      background: #800000;
-      background-image: radial-gradient(farthest-corner at 40px 40px,
-        #f90 0%, #13e 100%);
-
-      text-align: center;
-    }
-
-
-    .lossScreen p {
-      font-size: 45px;
-      color: #0000ff;
-      text-transform: uppercase;
-    }
-
-    @media only screen and (max-width: 735px) {
-      .lossScreen {
-        max-width: 80%;
-        margin: 0 auto;
-        text-align: center;
-        margin-top: 50px;
-
-
+        #f60 0%, #33e 60%);
       }
-    }
 
-    @media only screen and (max-width: 735px) {
-    .lossScreen p {
-
-      font-size: 15px;
-      margin-top: 10px;
-      text-align: center;
-      margin: 0 auto;
-      padding: 10px;
-    }
-    }
-
-    .targetName{
-      font-size: 40px;
-      color: white;
-      margin: 0px;
-    }
-
-    #playerName {
-      text-align: center;
-      display: flex;
-      padding: 10px;
-      margin: 0 auto;
-      font-size: 30px;
-      margin-top: 10px;
-      background-color: grey;
-    }
-
-    @media only screen and (max-width: 735px) {
-      #playerName {
-        text-align: center;
-        display: flex;
-        padding: 5px;
-        margin: 0 auto;
-        font-size: 10px;
-        margin-top: 10px;
-        background-color: grey;
+      body .welcome{
+        margin-top: 120px;
       }
-    }
-
-    .levelButtons{
-      text-align: center;
-      padding: 10px;
-      font-size: 55px;
-      margin-top: 20px;
-    }
-    @media only screen and (max-width: 735px) {
-      .levelButtons {
-        text-align: center;
-        padding: 0px;
-        font-size: 15px;
-        margin-bottom: 30px;
-
-
+      @media only screen and (max-width: 735px) {
+        body .welcome {
+          margin-top: 20px;
+        }
       }
-    }
 
-    @media only screen and (max-width: 735px) {
-      .start {
-        text-align: center;
-        padding: 0px;
+      .welcome p{
         font-size: 25px;
-        margin-bottom: 30px;
-
-
-      }
-    }
-
-    .start{
-      font-size: 30px;
-      border-radius: 8px;
-    }
-
-    @media only screen and (max-width: 735px) {
-      .start {
-        font-size: 15px;
+        margin-bottom: 40px;
+        margin: 20px;
 
       }
-    }
 
-
-
-    .restart{
-      font-size: 25px;
-    }
-    @media only screen and (max-width: 735px) {
-    button.restart {
-
-      font-size: 15px;
-      margin-top: 0px;
-      text-align: center;
-      margin: 0 auto;
-
-    }
-    }
-
-    @media only screen and (max-width: 735px) {
-    .restart-current-level {
-
-      font-size: 15px;
-      margin-top: 10px;
-      text-align: center;
-      margin: 0 auto;
-    }
-    }
-    .clock{
-      text-align: center;
-      color: white;
-    }
-    @media only screen and (max-width: 735px) {
-      #timer{
+      @media only screen and (max-width: 735px) {
+        .welcome p {
+          font-size: 15px;
+          margin-bottom: 10px;
+          padding: 10px;
+        }
+      }
+      h1 {
+        font-family: 'Architects Daughter', cursive;
         text-align: center;
-      color: white;
-      font-size: 10px;
-    }
-  }
+        font-size: 50px;
 
-    @media only screen and (max-width : 420px) {
-      p{
-        font-size: 100px;
       }
-    }
+
+      @media only screen and (max-width: 735px) {
+        h1 {
+          font-family: 'Architects Daughter', cursive;
+          text-align: center;
+          font-size: 20px;
+          animation: none;
+        }
+      }
+
+
+
+      .content {
+        display: flex;
+        max-width: 60%;
+        padding: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        perspective: 1000px;
+        perspective-origin: 40% 400px;
+        margin: 0 auto;
+        float: right;
+        margin-top: -10px;
+      }
+
+      @media only screen and (max-width: 735px) {
+        .content {
+          display: flex;
+          max-width: 100%;
+          padding: 15px;
+          flex-wrap: wrap;
+          justify-content: center;
+          perspective: 1000px;
+          perspective-origin: 40% 400px;
+          margin: 0 auto;
+          float: right;
+          margin-top: 220px;
+          font-size: 10px;
+        }
+      }
+
+      .card {
+        font-size: 80px;
+        margin: 5px;
+        border-radius: 10px;
+        background: #0F0F3A;
+        color: white;
+        text-align: center;
+        line-height: 150px;
+        font-weight: 600;
+        height: 195px;
+        width: 160px;
+        transform: rotateX(30deg);
+        text-shadow: 4px 4px 8px yellow;
+      }
+
+      @media only screen and (max-width: 735px) {
+        .card {
+          font-size: 10px;
+          height: 50px;
+          width: 50px;
+        }
+      }
+
+      @media only screen and (max-width: 735px) {
+        .unpaired {
+          font-size: 10px;
+        }
+      }
+
+      .card:hover {
+        -webkit-animation-name: pulse;
+        animation-name: pulse;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+      }
+
+      @media only screen and (max-width: 735px) {
+        .card:hover {
+          font-size: 10px;
+          height: 50px;
+          width: 50px;
+          -webkit-animation-name: pulse;
+          animation-name: pulse;
+          -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+          -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+          -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+        }
+      }
+
+      @-webkit-keyframes pulse {
+        25% {
+          -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+        }
+        75% {
+          -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+        }
+      }
+
+      @keyframes pulse {
+        25% {
+          -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+          transform: scale(1.2);
+        }
+        75% {
+          -webkit-transform: scale(0.8);
+          -ms-transform: scale(0.8);
+          transform: scale(0.8);
+        }
+      }
+
+      /*GAMEBOARDINSTRUCTIONS, NAME, PAIRS MATCHED AND TIME*/
+      .left{
+        margin-left:40px;
+        float: left;
+        max-width: 35%;
+        position: fixed;
+      }
+      @media only screen and (max-width: 735px) {
+        .left {
+          font-size: 10px;
+          height: 10px;
+          max-width: 100%;
+          margin-left:70px;
+          float: center;
+          margin-right: 70px;
+        }
+      }
+
+      .rules{
+        text-align: center;
+        font-size: 50px;
+        font-family: 'Architects Daughter', cursive;
+      }
+
+      @media only screen and (max-width: 735px) {
+        .rules{
+          text-align:center;
+          margin: 0 auto;
+          font-size: 10px;
+          font-family: 'Architects Daughter', cursive;
+        }
+      }
+
+      @media only screen and (max-width: 735px) {
+        .left p{
+          text-align: center;
+          font-size:10px;
+        }
+      }
+
+      p{
+        text-align: center;
+        font-size:26px;
+      }
+
+      .startGameTag{
+        color: yellow;
+        font-size:40px;
+        margin: 0px;
+        text-transform: uppercase;
+      }
+
+      .card p {
+        font-size: 90px;
+        margin: 5px;
+        border-radius: 10px;
+        background: #0F0F3A;
+        color: white;
+        text-align: center;
+        line-height: 150px;
+        font-weight: 600;
+        height: 200px;
+        width: 175px;
+        transform: rotateX(30deg);
+        text-shadow: 4px 4px 8px yellow;
+      }
+
+      @media only screen and (max-width: 735px) {
+        .card p{
+          font-size: 40px;
+          margin: px;
+          border-radius: 10px;
+          background: #0F0F3A;
+          color: white;
+          text-align: center;
+          line-height: 50px;
+          font-weight: 600;
+          height: 20px;
+          width: 30px;
+          transform: rotateX(30deg);
+          text-shadow: 4px 4px 8px yellow;
+        }
+      }
+
+      /*BUTTONS*/
+
+      .buttons {
+        text-align: center;
+        font-size: 30px;
+        color: black;
+      }
+
+
+
+      #startGameButton{
+        font-size: 40px;
+        margin-top: 10px;
+        text-align: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+      }
+
+      @media only screen and (max-width: 735px) {
+        #startGameButton {
+
+          font-size: 15px;
+          margin-top: 10px;
+          text-align: center;
+          margin: 0 auto;
+        }
+      }
+
+      #restartGameButton{
+        font-size: 40px;
+        margin-top: 10px;
+        flex-wrap: wrap;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+
+
+      /*GAMEBOARD TEXT*/
+      .currentPlayer{
+        font-size: 40px;
+        margin: 0px;
+      }
+      .scoreText{
+        font-size: 40px;
+        margin: 0px;
+
+      }
+
+      .player1Score {
+        font-size: 40px;
+        margin: 0px;
+        color: white;
+      }
+
+      #timer{
+        font-size: 50px;
+        color: white;
+      }
+
+      .levelButtons{
+        text-align: center;
+        padding: 10px;
+        font-size: 55px;
+        margin-top: 20px;
+      }
+      @media only screen and (max-width: 735px) {
+        .levelButtons {
+          text-align: center;
+          padding: 0px;
+          font-size: 15px;
+          margin-bottom: 30px;
+
+
+        }
+      }
+
+      @media only screen and (max-width: 735px) {
+        .start {
+          text-align: center;
+          padding: 0px;
+          font-size: 25px;
+          margin-bottom: 30px;
+
+
+        }
+      }
+
+      .start{
+        font-size: 30px;
+        border-radius: 8px;
+      }
+
+      @media only screen and (max-width: 735px) {
+        .start {
+          font-size: 15px;
+
+        }
+      }
+
+      .restart-current-level{
+        font-size: 35px;
+        margin-bottom: 100px;
+        color: tint(#BADA55, 42%);
+      }
+
+      .restart{
+        font-size: 35px;
+
+        color: tint(#BADA55, 42%);
+
+      }
+      @media only screen and (max-width: 735px) {
+        button.restart {
+
+          font-size: 15px;
+          margin-top: 0px;
+          text-align: center;
+          margin: 0 auto;
+
+        }
+      }
+
+      @media only screen and (max-width: 735px) {
+        .restart-current-level {
+
+          font-size: 15px;
+          margin-top: 10px;
+          text-align: center;
+          margin: 0 auto;
+        }
+      }
+
+
+      /*WIN SCREEN*/
+      .winScreen{
+        margin: 0 auto;
+        max-width: 80%;
+        padding: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        perspective: 1000px;
+        perspective-origin: 50% 400px;
+        margin: 0 auto;
+        text-align: center;
+        border-radius:50%;
+        border: 2px solid #000;
+        background: #800000;
+        background-image: radial-gradient(farthest-corner at 40px 40px,
+          #f90 0%, #13e 100%);
+        }
+        .winScreen p {
+          font-size: 40px;
+          color: #0000ff;
+          animation: fontbulger 2s infinite;
+        }
+        @media only screen and (max-width: 735px) {
+          .winScreen p {
+            animation: none;
+          }
+        }
+        /*LOSS SCREEN*/
+
+        .lossScreen{
+          margin: 0 auto;
+          max-width: 80%;
+          padding: 20px;
+          flex-wrap: wrap;
+          justify-content: center;
+          perspective: 1000px;
+          perspective-origin: 50% 400px;
+          margin: 0 auto;
+          text-align: center;
+          border-radius:50%;
+          border: 2px solid #000;
+          background: #800000;
+          background-image: radial-gradient(farthest-corner at 40px 40px,
+            #f90 0%, #13e 100%);
+            text-align: center;
+          }
+          .lossScreen p {
+            font-size: 35px;
+            color: #0000ff;
+            animation: fontbulger 2s infinite;
+          }
+
+          @keyframes fontbulger {
+            0% {
+              font-size: 40px;
+            }
+            30% {
+              font-size: 60px;
+            }
+            100% {
+              font-size: 40px;
+            }
+          }
+
+          @media only screen and (max-width: 735px) {
+            .lossScreen {
+              max-width: 80%;
+              margin: 0 auto;
+              text-align: center;
+              margin-top: 50px;
+            }
+          }
+
+          @media only screen and (max-width: 735px) {
+            .lossScreen p {
+
+              font-size: 15px;
+              margin-top: 10px;
+              text-align: center;
+              margin: 0 auto;
+              padding: 10px;
+              animation: none;
+            }
+          }
+
+          .targetName{
+            font-size: 40px;
+            color: white;
+            margin: 0px;
+          }
+
+          #playerName {
+            text-align: center;
+            display: flex;
+            padding: 10px;
+            margin: 0 auto;
+            font-size: 30px;
+            margin-top: 10px;
+            background-color: grey;
+          }
+
+          @media only screen and (max-width: 735px) {
+            #playerName {
+              text-align: center;
+              display: flex;
+              padding: 5px;
+              margin: 0 auto;
+              font-size: 10px;
+              margin-top: 10px;
+              background-color: grey;
+            }
+          }
+
+
+          .clock{
+            text-align: center;
+            color: white;
+          }
+          @media only screen and (max-width: 735px) {
+            #timer{
+              text-align: center;
+              color: white;
+              font-size: 10px;
+            }
+          }
+
+          @media only screen and (max-width : 420px) {
+            p{
+              font-size: 100px;
+            }
+          }
+          /* ANIMATION */
+          .question-image {
+            position: fixed;
+            margin-top: 0px;
+            width: 200px;
+            height: 150px;
+            left: -260px;
+          }
+
+
+          @media only screen and (max-width: 735px) {
+            .question-image {
+              text-align: center;
+              color: white;
+              font-size: 10px;
+              animation: none;
+            }
+          }
