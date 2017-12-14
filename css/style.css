@@ -130,6 +130,10 @@ p{
 
 }
 
+.restart-current-level{
+  font-size: 30px;
+}
+
 #startGameButton{
   font-size: 40px;
   margin-top: 10px;
@@ -147,20 +151,6 @@ p{
   margin: 0 auto;
 }
 
-.restartGameButtonWinScreen{
-font-size: 30px;
-margin-top: 10px;
-text-align: center;
-margin: 0 auto;
-}
-
-.restartGameButtonLossScreen{
-font-size: 30px;
-margin-top: 10px;
-
-text-align: center;
-margin: 0 auto;
-}
 
 
 .currentPlayer{
@@ -173,10 +163,6 @@ margin: 0 auto;
 
 }
 
-.player1Name {
-  font-size: 50px;
-  color:red;
-}
 .player1Score {
   font-size: 40px;
   margin: 0px;
@@ -279,9 +265,7 @@ body .welcome{
   font-size: 30px;
 }
 
-.start1{
-  font-size: 30px;
-}
+
 .restart{
   font-size: 30px;
 }

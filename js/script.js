@@ -1,23 +1,23 @@
 $(() => {
 
-  const levels = {
+const levels = {
     '1': {
-      timePenalty: 1,
-      correctGuess: 3
+      timePenalty: 4,
+      correctGuess: 2
     },
     '2': {
-      timePenalty: 2,
+      timePenalty: 5,
       correctGuess: 3
     },
     '3': {
-      timePenalty: 3,
-      correctGuess: 3
+      timePenalty: 6,
+      correctGuess: 4
     }
   };
 
   // Define cards array
   var score = 0;
-  var seconds = 20;
+  var seconds = 60;
 
 
   let app = {
@@ -37,9 +37,7 @@ $(() => {
 
         // seconds = 60;
         const chosenLevel = $(e.target).data('level');
-        console.log(chosenLevel);
         app.currentLevel = levels[chosenLevel];
-        console.log(app.currentLevel);
 
         $('.welcome').hide();
         $('.content').hide();
@@ -62,9 +60,7 @@ $(() => {
 
         // seconds = 60;
         const chosenLevel = $(e.target).data('level');
-        console.log(chosenLevel);
         app.currentLevel = levels[chosenLevel];
-        console.log('app.currentLevel', app.currentLevel, $(e.target).data('level'));
 
         $('.welcome').hide();
         $('.content').hide();
@@ -75,6 +71,9 @@ $(() => {
 
         seconds = 60;
         score = 0;
+
+
+        $('.clock').html('60');
         const name = $('#playerName').val();
         $('.player1Score').html('0 / 8');
         $('.targetName').html(name);
@@ -98,14 +97,11 @@ $(() => {
         app.cards[random] = temp;
       }
       app.assignCards();
-      console.log(`Shuffled Card Array: ${app.cards}`);
     },
 
     //Assign Cards Data Values
     assignCards: () => {
-      console.log($('.card').length)
       $('.card').each(function(index) {
-        console.log(app.cards[index]);
         $(this).animate({opacity: 1}).addClass('unpaired').empty();
         $(this).attr('data-card-value', app.cards[index]);
       });
@@ -146,6 +142,7 @@ $(() => {
           app.winCondition();
         } else {
           app.timePenalty();
+
           setTimeout(function(){
             $('.selected').each(function(){
               $(this).html('').removeClass('selected');
@@ -172,6 +169,7 @@ $(() => {
     //Time Penalty Function
     timePenalty: () => {
       seconds -= app.currentLevel.timePenalty;
+
     },
     //Time Reward Function
     timeReward: () => {
@@ -195,13 +193,14 @@ $(() => {
     $('.content').show();
 
 
-    //app.shuffle();
+
 
 
     function countdown(minutes) {
 
       var mins = minutes;
       function tick() {
+        console.log(seconds);
         var counter = document.getElementById('timer');
         var currentMinutes = mins-1;
         seconds--;
