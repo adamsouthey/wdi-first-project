@@ -20,12 +20,12 @@ $(() => {
     }
   };
 
-  // Define cards array
   let score = 0;
   let seconds = 60;
+  const $restartCurrentLevel =   $('.restart-current-level');
 
-
-  let app = {
+  //Define the cards array
+  const app = {
     cards: [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8],
     currentLevel: null,
     initialise: () => {
@@ -37,7 +37,7 @@ $(() => {
       $('.start').on('click', function reload(e) {
 
         const chosenLevel = $(e.target).data('level');
-        $('.restart-current-level').data('level', chosenLevel);
+        $restartCurrentLevel.data('level', chosenLevel);
         app.currentLevel = levels[chosenLevel];
 
         $('.welcome, .content, .winScreen, .lossScreen').hide();
@@ -50,7 +50,7 @@ $(() => {
       });
 
       //Restart Level from lossScreen
-      $('.restart-current-level').on('click', function reload(e) {
+      $restartCurrentLevel.on('click', function reload(e) {
         const chosenLevel = $(e.target).data('level');
         app.currentLevel = levels[chosenLevel];
 
@@ -176,14 +176,14 @@ $(() => {
 
   $(function animation() {
     setInterval(function() {
-      $('.question-image').animate({ left: $(window).width() + 'px' }, 3000, 'linear', function() {
+      $('.question-image').animate({ left: $(window).width() + 'px' }, 1000, 'linear', function() {
         $(this).css({ left: - $(this).width() + 'px' });
       });
     }, 10);
   });
   $(function animation() {
     setInterval(function() {
-      $('.question-image').animate({ left: $(window).width() + 'px' }, 1000, 'linear', function() {
+      $('.question-image').animate({ left: $(window).width() + 'px' }, 500, 'linear', function() {
         $(this).css({ left: - $(this).width() + 'px' });
       });
     }, 10);

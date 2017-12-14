@@ -559,7 +559,7 @@ body{
           /* ANIMATION */
           .question-image {
             position: fixed;
-            margin-top: 0px;
+            margin-top: -10px;
             width: 200px;
             height: 150px;
             left: -260px;
