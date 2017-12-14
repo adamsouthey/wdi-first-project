@@ -251,7 +251,8 @@ p{
 }
 
 .restart-current-level{
-  font-size: 30px;
+  font-size: 25px;
+  margin-bottom: 100px;
 }
 
 #startGameButton{
@@ -516,7 +517,7 @@ p{
 
 
     .restart{
-      font-size: 30px;
+      font-size: 25px;
     }
     @media only screen and (max-width: 735px) {
     button.restart {

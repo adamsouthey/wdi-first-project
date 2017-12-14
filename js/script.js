@@ -201,7 +201,7 @@ const levels = {
 
       var mins = minutes;
       function tick() {
-        console.log(seconds);
+
         var counter = document.getElementById('timer');
         var currentMinutes = mins-1;
         seconds--;
