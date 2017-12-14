@@ -2,7 +2,10 @@
   font-family: 'Architects Daughter', cursive;
   margin: 10;
   box-sizing: border-box;
+
 }
+
+
 
 body{
   margin: 0 auto;
@@ -10,12 +13,26 @@ body{
   width: 100%;
 }
 
+@media only screen and (max-width: 735px) {
+  body {
+    text-align: center;
+  }
+}
+
+
 
 
 h1 {
   font-family: 'Architects Daughter', cursive;
   text-align: center;
   font-size: 55px;
+}
+@media only screen and (max-width: 735px) {
+  h1 {
+    font-family: 'Architects Daughter', cursive;
+    text-align: center;
+    font-size: 20px;
+  }
 }
 
 
@@ -32,6 +49,21 @@ h1 {
   margin-top: -10px;
 }
 
+@media only screen and (max-width: 735px) {
+  .content {
+    display: flex;
+    max-width: 100%;
+    padding: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    perspective: 1000px;
+    perspective-origin: 40% 400px;
+    margin: 0 auto;
+    float: right;
+    margin-top: 220px;
+    font-size: 10px;
+  }
+}
 
 
 .card {
@@ -44,10 +76,27 @@ h1 {
   line-height: 150px;
   font-weight: 600;
   height: 195px;
-  width: 175px;
+  width: 160px;
   transform: rotateX(30deg);
   text-shadow: 4px 4px 8px yellow;
 }
+
+@media only screen and (max-width: 735px) {
+  .card {
+    font-size: 10px;
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  .unpaired {
+    font-size: 10px;
+
+  }
+}
+
+
 
 .card:hover {
   -webkit-animation-name: pulse;
@@ -59,6 +108,23 @@ h1 {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
+
+@media only screen and (max-width: 735px) {
+  .card:hover {
+    font-size: 10px;
+    height: 50px;
+    width: 50px;
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+}
+
 
 
 @-webkit-keyframes pulse {
@@ -88,23 +154,59 @@ h1 {
 .left{
   margin-left:40px;
   float: left;
-  max-width: 40%;
+  max-width: 35%;
 }
+@media only screen and (max-width: 735px) {
+  .left {
+
+    font-size: 10px;
+    height: 10px;
+    max-width: 100%;
+      margin-left:70px;
+
+    float: center;
+    margin-right: 70px;
+  }
+}
+
+
 .rules{
   text-align: center;
   font-size: 50px;
-
   font-family: 'Architects Daughter', cursive;
+  }
+
+  @media only screen and (max-width: 735px) {
+    .rules{
+    text-align:center;
+    margin: 0 auto;
+    font-size: 10px;
+    font-family: 'Architects Daughter', cursive;
+    }
+  }
+
+
+
+@media only screen and (max-width: 735px) {
+.left p{
+  text-align: center;
+  font-size:10px;
 }
+}
+
+
 
 p{
   text-align: center;
   font-size:26px;
 }
 
+
+
+
 .startGameTag{
   color: yellow;
-  font-size:30px;
+  font-size:40px;
   margin: 0px;
   text-transform: uppercase;
 }
@@ -124,6 +226,24 @@ p{
   text-shadow: 4px 4px 8px yellow;
 }
 
+@media only screen and (max-width: 735px) {
+  .card p{
+    font-size: 40px;
+    margin: px;
+    border-radius: 10px;
+    background: #0F0F3A;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 600;
+    height: 20px;
+    width: 30px;
+    transform: rotateX(30deg);
+    text-shadow: 4px 4px 8px yellow;
+  }
+}
+
+
 .buttons {
   text-align: center;
   font-size: 30px;
@@ -141,8 +261,19 @@ p{
 
   flex-wrap: wrap;
   margin: 0 auto;
-
 }
+
+@media only screen and (max-width: 735px) {
+#startGameButton {
+
+  font-size: 15px;
+  margin-top: 10px;
+  text-align: center;
+  margin: 0 auto;
+}
+}
+
+
 #restartGameButton{
   font-size: 40px;
   margin-top: 10px;
@@ -185,93 +316,242 @@ p{
   perspective-origin: 50% 400px;
   margin: 0 auto;
   text-align: center;
-    border-radius:50%;
+  border-radius:50%;
   border: 2px solid #000;
   background: #800000;
   background-image: radial-gradient(farthest-corner at 40px 40px,
-      #f90 0%, #13e 100%);
-}
-.welcome:hover{
-  background-image: radial-gradient(farthest-corner at 40px 40px,
-      #f60 0%, #33e 60%);
-}
-
-
-body .welcome{
-  margin-top: 80px;
-}
-
-.welcome p{
-  font-size: 40px;
-  margin-bottom: 40px;
-}
-
-.winScreen{
-  max-width: 60%;
-  margin: 0 auto;
-  font-size: 100px;
-  text-align: center;
-  color: red;
-  background: url('https://wallup.net/wp-content/uploads/2016/05/25/339073-wood-timber-closeup-wooden_surface-texture-curved_wood.jpg');
-  border: 1px dashed #ddd;
-  box-shadow: 0 0 0 3px #fff, 0 0 0 5px #ddd, 0 0 0 10px #fff, 0 0 2px 10px #eee;
-}
- .winScreen p {
-   font-size: 40px;
-   color: #0000ff;
- }
-
- .lossScreen{
-   max-width: 60%;
-   margin: 0 auto;
-   font-size: 100px;
-   text-align: center;
-   color: red;
-   background: url('https://wallup.net/wp-content/uploads/2016/05/25/339073-wood-timber-closeup-wooden_surface-texture-curved_wood.jpg');
-   border: 1px dashed #ddd;
-   box-shadow: 0 0 0 3px #fff, 0 0 0 5px #ddd, 0 0 0 10px #fff, 0 0 2px 10px #eee;
- }
-
-
-  .lossScreen p {
-    font-size: 40px;
-    color: #0000ff;
+    #f90 0%, #13e 100%);
   }
 
-.targetName{
-  font-size: 40px;
-  color: white;
-  margin: 0px;
-}
-
-#playerName {
-  text-align: center;
-  display: flex;
-  padding: 10px;
-  margin: 0 auto;
-  font-size: 30px;
-  margin-top: 10px;
-  background-color: grey;
-}
-
-.levelButtons{
-  text-align: center;
-  padding: 10px;
-  font-size: 55px;
-  margin-top: 20px;
-}
-
-.start{
-  font-size: 30px;
-}
+  @media only screen and (max-width: 735px) {
+    .welcome {
+      max-width: 90%;
+      padding: 2px;
+      flex-wrap: wrap;
+      justify-content: center;
+      perspective: 10px;
+      perspective-origin: 20% 30px;
+      margin: 0 auto;
+      margin-bottom: 100px;
+      text-align: center;
+      border-radius:40%;
+      border: 2px solid #000;
+      background: #800000;
+      background-image: radial-gradient(farthest-corner at 40px 40px,
+        #f90 0%, #13e 100%);
+    }
+  }
 
 
-.restart{
-  font-size: 30px;
-}
 
-.clock{
-  text-align: center;
-  color: white;
+  .welcome:hover{
+    background-image: radial-gradient(farthest-corner at 40px 40px,
+      #f60 0%, #33e 60%);
+    }
 
-}
+
+    body .welcome{
+      margin-top: 80px;
+    }
+    @media only screen and (max-width: 735px) {
+      body .welcome {
+      margin-top: 20px;
+
+
+      }
+    }
+
+    .welcome p{
+      font-size: 30px;
+      margin-bottom: 40px;
+      margin: 20px;
+    }
+
+    @media only screen and (max-width: 735px) {
+      .welcome p {
+        font-size: 15px;
+        margin-bottom: 10px;
+        padding: 10px;
+
+
+      }
+    }
+
+    .winScreen{
+      margin: 0 auto;
+      max-width: 80%;
+      padding: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      perspective: 1000px;
+      perspective-origin: 50% 400px;
+      margin: 0 auto;
+      text-align: center;
+      border-radius:50%;
+      border: 2px solid #000;
+      background: #800000;
+      background-image: radial-gradient(farthest-corner at 40px 40px,
+        #f90 0%, #13e 100%);
+    }
+    .winScreen p {
+      font-size: 40px;
+      color: #0000ff;
+    }
+
+    .lossScreen{
+      margin: 0 auto;
+      max-width: 80%;
+      padding: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      perspective: 1000px;
+      perspective-origin: 50% 400px;
+      margin: 0 auto;
+      text-align: center;
+      border-radius:50%;
+      border: 2px solid #000;
+      background: #800000;
+      background-image: radial-gradient(farthest-corner at 40px 40px,
+        #f90 0%, #13e 100%);
+
+      text-align: center;
+    }
+
+
+    .lossScreen p {
+      font-size: 65px;
+      color: #0000ff;
+      text-transform: uppercase;
+    }
+
+    @media only screen and (max-width: 735px) {
+      .lossScreen {
+        max-width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 50px;
+
+
+      }
+    }
+
+    @media only screen and (max-width: 735px) {
+    .lossScreen p {
+
+      font-size: 15px;
+      margin-top: 10px;
+      text-align: center;
+      margin: 0 auto;
+      padding: 10px;
+    }
+    }
+
+    .targetName{
+      font-size: 40px;
+      color: white;
+      margin: 0px;
+    }
+
+    #playerName {
+      text-align: center;
+      display: flex;
+      padding: 10px;
+      margin: 0 auto;
+      font-size: 30px;
+      margin-top: 10px;
+      background-color: grey;
+    }
+
+    @media only screen and (max-width: 735px) {
+      #playerName {
+        text-align: center;
+        display: flex;
+        padding: 5px;
+        margin: 0 auto;
+        font-size: 10px;
+        margin-top: 10px;
+        background-color: grey;
+      }
+    }
+
+    .levelButtons{
+      text-align: center;
+      padding: 10px;
+      font-size: 55px;
+      margin-top: 20px;
+    }
+    @media only screen and (max-width: 735px) {
+      .levelButtons {
+        text-align: center;
+        padding: 0px;
+        font-size: 15px;
+        margin-bottom: 30px;
+
+
+      }
+    }
+
+    @media only screen and (max-width: 735px) {
+      .start {
+        text-align: center;
+        padding: 0px;
+        font-size: 25px;
+        margin-bottom: 30px;
+
+
+      }
+    }
+
+    .start{
+      font-size: 20px;
+    }
+
+    @media only screen and (max-width: 735px) {
+      .start {
+        font-size: 15px;
+
+      }
+    }
+
+
+
+    .restart{
+      font-size: 30px;
+    }
+    @media only screen and (max-width: 735px) {
+    button.restart {
+
+      font-size: 15px;
+      margin-top: 0px;
+      text-align: center;
+      margin: 0 auto;
+
+    }
+    }
+
+    @media only screen and (max-width: 735px) {
+    .restart-current-level {
+
+      font-size: 15px;
+      margin-top: 10px;
+      text-align: center;
+      margin: 0 auto;
+    }
+    }
+    .clock{
+      text-align: center;
+      color: white;
+    }
+    @media only screen and (max-width: 735px) {
+      #timer{
+        text-align: center;
+      color: white;
+      font-size: 10px;
+    }
+  }
+
+    @media only screen and (max-width : 420px) {
+      p{
+        font-size: 100px;
+      }
+    }

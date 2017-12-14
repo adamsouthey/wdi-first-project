@@ -6,11 +6,11 @@ const levels = {
       correctGuess: 2
     },
     '2': {
-      timePenalty: 5,
+      timePenalty: 6,
       correctGuess: 3
     },
     '3': {
-      timePenalty: 6,
+      timePenalty: 8,
       correctGuess: 4
     }
   };
@@ -41,10 +41,10 @@ const levels = {
 
         $('.welcome').hide();
         $('.content').hide();
-        $('.left').show();
         $('.winScreen').hide();
         $('.lossScreen').hide();
         $('.clock').show();
+        $('.left').show();
 
         const name = $('#playerName').val();
         $('.targetName').html(name);
@@ -168,12 +168,13 @@ const levels = {
 
     //Time Penalty Function
     timePenalty: () => {
-      seconds -= app.currentLevel.timePenalty;
+      console.log(seconds);
+      seconds = seconds - app.currentLevel.timePenalty;
 
     },
     //Time Reward Function
     timeReward: () => {
-      seconds += app.currentLevel.correctGuess;
+      seconds = seconds - app.currentLevel.correctGuess;
     }
 
 

@@ -7,6 +7,7 @@
   <script type="text/javascript" src="./js/script.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   <header>
@@ -32,7 +33,7 @@
     <div class = "rules">Instructions</div>
     <P>Collect 8 matching pairs before the time runs out<br>Time Limit = 60 seconds<br>Incorrect Guesses = Time penalties<br>Correct Guesses = Added Time<br></P>
     <p class = 'startGameTag'>Press start game to start the timer!</p>
-    <hr>
+
     <p class = 'currentPlayer'>Current Player</p>
     <p class = 'targetName'></p>
 
@@ -75,14 +76,14 @@
     <div class="winScreen">
       <p> WINNER!!</p>
       <p> Congratulations on this incredible achievement!</p>
-      <p> To play again, please press the restart game button</p>
-      <button class="nextLevel">Next Level</button>
+      <p> To play again, press Homepage and select the next level</p>
+      <button class="restart">Homepage</button>
     </div>
 
     <div class='lossScreen'>
-      <p> UNLUCKY!! TRY AGAIN!!</p>
+      <p> Good effort!!</p>
       <p> You didn't find the pairs in time!</p>
-      <p> Restart Game<br>To return to the homepage please press homepage</p>
+      <p> Please choose from the following options</p>
       <!-- <input type="button" value="Restart Game" class="restartGameButtonLossScreen"> -->
       <button class="restart-current-level" data-level="1">Retry Current Level</button>
       <button class="restart">Homepage</button>
