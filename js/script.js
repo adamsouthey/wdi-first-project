@@ -2,15 +2,15 @@ $(() => {
 
 const levels = {
     '1': {
-      timePenalty: 4,
+      timePenalty: 2,
       correctGuess: 2
     },
     '2': {
-      timePenalty: 6,
+      timePenalty: 3,
       correctGuess: 3
     },
     '3': {
-      timePenalty: 8,
+      timePenalty: 4,
       correctGuess: 4
     }
   };
@@ -37,6 +37,7 @@ const levels = {
 
         // seconds = 60;
         const chosenLevel = $(e.target).data('level');
+        $('.restart-current-level').data('level', chosenLevel);
         app.currentLevel = levels[chosenLevel];
 
         $('.welcome').hide();
@@ -168,13 +169,13 @@ const levels = {
 
     //Time Penalty Function
     timePenalty: () => {
-      console.log(seconds);
       seconds = seconds - app.currentLevel.timePenalty;
 
     },
     //Time Reward Function
     timeReward: () => {
       seconds = seconds - app.currentLevel.correctGuess;
+
     }
 
 
@@ -193,44 +194,23 @@ const levels = {
   $('.startGameButton').on('click', function(){
     $('.content').show();
 
+    console.log(app.currentLevel.timePenalty);
 
+    function countdown() {
+      let exampleSeconds = 60;
+      const secondsInterval = setInterval(function(){
+        var $counter =$('#timer');
+        exampleSeconds -= app.currentLevel.timePenalty;
+        $counter.html(exampleSeconds);
 
-
-
-    function countdown(minutes) {
-
-      var mins = minutes;
-      function tick() {
-
-        var counter = document.getElementById('timer');
-        var currentMinutes = mins-1;
-        seconds--;
-        counter.innerHTML =
-        currentMinutes.toString() + " " + (seconds < 10 ? "" : "") + String(seconds);
-        if( seconds > 0 ) {
-          timeoutHandle=setTimeout(tick, 1000);
-        } else {
-
-
-          if(mins > 1){
-
-            // countdown(mins-1);
-            setTimeout(function () {
-              countdown(mins - 1);
-            }, 1000);
-
-          }
-          if (seconds <= 0){
-            $('.content').hide();
-            $('.left').hide();
-            $('.clock').hide();
-            $('.lossScreen').show();
-          }
+        if (exampleSeconds <= 0){
+          clearInterval(secondsInterval);
+          $('.content, .left, .clock').hide();
+          $('.lossScreen').show();
         }
-      }
-      tick();
+      }, 1000);
     }
-    countdown(1);
+    countdown();
   });
   app.initialise();
 });
