@@ -2,10 +2,7 @@
   font-family: 'Architects Daughter', cursive;
   margin: 10;
   box-sizing: border-box;
-
 }
-
-
 
 body{
   margin: 0 auto;
@@ -18,9 +15,6 @@ body{
     text-align: center;
   }
 }
-
-
-
 
 h1 {
   font-family: 'Architects Daughter', cursive;
@@ -352,20 +346,19 @@ p{
 
 
     body .welcome{
-      margin-top: 80px;
+      margin-top: 120px;
     }
     @media only screen and (max-width: 735px) {
       body .welcome {
       margin-top: 20px;
-
-
-      }
+  }
     }
 
     .welcome p{
-      font-size: 30px;
+      font-size: 25px;
       margin-bottom: 40px;
       margin: 20px;
+      text-transform: uppercase;
     }
 
     @media only screen and (max-width: 735px) {
@@ -373,10 +366,10 @@ p{
         font-size: 15px;
         margin-bottom: 10px;
         padding: 10px;
-
-
-      }
+  }
     }
+
+
 
     .winScreen{
       margin: 0 auto;
@@ -420,7 +413,7 @@ p{
 
 
     .lossScreen p {
-      font-size: 65px;
+      font-size: 45px;
       color: #0000ff;
       text-transform: uppercase;
     }
@@ -504,7 +497,8 @@ p{
     }
 
     .start{
-      font-size: 20px;
+      font-size: 30px;
+      border-radius: 8px;
     }
 
     @media only screen and (max-width: 735px) {

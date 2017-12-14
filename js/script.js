@@ -2,33 +2,38 @@ $(() => {
 
 const levels = {
     '1': {
-      timePenalty: 2,
-      correctGuess: 2
+      timePenalty: 1
+
     },
     '2': {
-      timePenalty: 3,
-      correctGuess: 3
+      timePenalty: 2
+
     },
     '3': {
-      timePenalty: 4,
-      correctGuess: 4
+      timePenalty: 2.5
+    },
+    '4': {
+      timePenalty: 3
+    },
+    '5': {
+      timePenalty: 3.5
     }
   };
 
   // Define cards array
-  var score = 0;
-  var seconds = 60;
+  let score = 0;
+  let seconds = 60;
 
 
   let app = {
     cards: [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8],
     currentLevel: null,
     initialise: () => {
-      $('.content').hide();
-      $('.left').hide();
-      $('.winScreen').hide();
-      $('.lossScreen').hide();
-      $('.clock').hide();
+      $('.content, .left, .winScreen, .lossScreen, .clock').hide();
+      // $('.left').hide();
+      // $('.winScreen').hide();
+      // $('.lossScreen').hide();
+      // $('.clock').hide();
       $('.welcome').show();
 
       //Start Game
@@ -40,20 +45,16 @@ const levels = {
         $('.restart-current-level').data('level', chosenLevel);
         app.currentLevel = levels[chosenLevel];
 
-        $('.welcome').hide();
-        $('.content').hide();
-        $('.winScreen').hide();
-        $('.lossScreen').hide();
-        $('.clock').show();
-        $('.left').show();
+        $('.welcome, .content, .winScreen, .lossScreen').hide();
+        $('.clock, .left').show();
+        // $('.content').hide();
+        // $('.winScreen').hide();
+        // $('.lossScreen').hide();
+        // $('.left').show();
 
         const name = $('#playerName').val();
         $('.targetName').html(name);
-
         app.shuffle();
-
-
-
       });
 
       $('.restart-current-level').on('click', function reload(e) {
@@ -63,12 +64,12 @@ const levels = {
         const chosenLevel = $(e.target).data('level');
         app.currentLevel = levels[chosenLevel];
 
-        $('.welcome').hide();
-        $('.content').hide();
-        $('.left').show();
-        $('.winScreen').hide();
-        $('.lossScreen').hide();
-        $('.clock').show();
+        $('.welcome, .content, .winScreen, .lossScreen').hide();
+        // $('.content').hide();
+        // $('.left').show();
+        // $('.winScreen').hide();
+        // $('.lossScreen').hide();
+        $('.clock, .left').show();
 
         seconds = 60;
         score = 0;
@@ -78,11 +79,7 @@ const levels = {
         const name = $('#playerName').val();
         $('.player1Score').html('0 / 8');
         $('.targetName').html(name);
-
         app.assignCards();
-
-
-
       });
 
     },
@@ -189,7 +186,7 @@ const levels = {
 
 
   //TIMER
-  var timeoutHandle;
+  // var timeoutHandle;
 
   $('.startGameButton').on('click', function(){
     $('.content').show();
