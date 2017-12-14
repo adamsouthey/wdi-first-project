@@ -2,28 +2,27 @@ $(() => {
 
   const levels = {
     '1': {
-      timePenalty: 3,
+      timePenalty: 1,
       correctGuess: 3
     },
     '2': {
-      timePenalty: 6,
+      timePenalty: 2,
       correctGuess: 3
     },
     '3': {
-      timePenalty: 8,
+      timePenalty: 3,
       correctGuess: 3
     }
   };
 
   // Define cards array
-  let score = 0;
-  var seconds = 60;
+  var score = 0;
+  var seconds = 20;
 
 
   let app = {
     cards: [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8],
     currentLevel: null,
-    practiceMode: true,
     initialise: () => {
       $('.content').hide();
       $('.left').hide();
@@ -32,22 +31,56 @@ $(() => {
       $('.clock').hide();
       $('.welcome').show();
 
-
       //Start Game
       $('.start').on('click', function reload(e) {
+
+
+        // seconds = 60;
         const chosenLevel = $(e.target).data('level');
         console.log(chosenLevel);
         app.currentLevel = levels[chosenLevel];
         console.log(app.currentLevel);
 
         $('.welcome').hide();
-        $('.content').show();
+        $('.content').hide();
         $('.left').show();
+        $('.winScreen').hide();
+        $('.lossScreen').hide();
         $('.clock').show();
+
         const name = $('#playerName').val();
         $('.targetName').html(name);
-        app.practiceMode === true;
+
         app.shuffle();
+
+
+
+      });
+
+      $('.restart-current-level').on('click', function reload(e) {
+
+
+        // seconds = 60;
+        const chosenLevel = $(e.target).data('level');
+        console.log(chosenLevel);
+        app.currentLevel = levels[chosenLevel];
+        console.log('app.currentLevel', app.currentLevel, $(e.target).data('level'));
+
+        $('.welcome').hide();
+        $('.content').hide();
+        $('.left').show();
+        $('.winScreen').hide();
+        $('.lossScreen').hide();
+        $('.clock').show();
+
+        seconds = 60;
+        score = 0;
+        const name = $('#playerName').val();
+        $('.player1Score').html('0 / 8');
+        $('.targetName').html(name);
+
+        app.assignCards();
+
 
 
       });
@@ -70,9 +103,10 @@ $(() => {
 
     //Assign Cards Data Values
     assignCards: () => {
-
+      console.log($('.card').length)
       $('.card').each(function(index) {
         console.log(app.cards[index]);
+        $(this).animate({opacity: 1}).addClass('unpaired').empty();
         $(this).attr('data-card-value', app.cards[index]);
       });
       app.clickHandlers();
@@ -91,7 +125,6 @@ $(() => {
     //Check for Match Function
     checkForMatch: () => {
 
-      // if(app.practiceMode) return false;
 
       if($('.selected').length == 2) {
         if($('.selected').first().data('cardValue') == $('.selected').last().data('cardValue')) {
@@ -99,11 +132,10 @@ $(() => {
           $('.selected').each(function(){
             $(this).animate({opacity: 0}).removeClass('unpaired');
 
-            if(!app.practiceMode) {
-              score += .5;
-              app.timeReward();
-              $('.player1Score').html(score + ' / 8');
-            }
+            score += .5;
+            app.timeReward();
+            $('.player1Score').html(score + ' / 8');
+
 
           });
 
@@ -111,14 +143,14 @@ $(() => {
             $(this).removeClass('selected');
           });
 
-          if(!app.practiceMode) app.winCondition();
+          app.winCondition();
         } else {
-          if(!app.practiceMode) app.timePenalty();
+          app.timePenalty();
           setTimeout(function(){
             $('.selected').each(function(){
               $(this).html('').removeClass('selected');
             });
-          }, 150);
+          }, 200);
         }
       }
     },
@@ -151,30 +183,27 @@ $(() => {
   };
 
 
-  $('.restartGameButton').on('click', function() {
+  $('.restart').on('click', function() {
     location.reload();
   });
-  $('.restartGameButtonLossScreen').on('click', function() {
-    location.reload();
-  });
-  $('.restartGameButtonWinScreen').on('click', function() {
-    location.reload();
-  });
+
 
   //TIMER
   var timeoutHandle;
 
   $('.startGameButton').on('click', function(){
-    app.practiceMode == false;
-    app.shuffle();
+    $('.content').show();
+
+
+    //app.shuffle();
 
 
     function countdown(minutes) {
 
-      var mins = minutes
+      var mins = minutes;
       function tick() {
         var counter = document.getElementById('timer');
-        var currentMinutes = mins-1
+        var currentMinutes = mins-1;
         seconds--;
         counter.innerHTML =
         currentMinutes.toString() + " " + (seconds < 10 ? "" : "") + String(seconds);

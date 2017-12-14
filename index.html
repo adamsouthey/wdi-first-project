@@ -40,53 +40,57 @@
     <div class = 'playerScoreBox'>
 
       <p class = "scoreText">Pairs Matched</p>
-        <p class = "player1Score">0 /8 </p>
+      <p class = "player1Score">0 /8 </p>
 
-        <p class = "scoreText">Time Remaining</p>
+      <p class = "scoreText">Time Remaining</p>
       <div class = 'clock' id='timer'>60</div>
-      </div>
+    </div>
     <div class = 'buttons'>
       <input type="button" value="Start Game" class="startGameButton" id='startGameButton'>
-      <input type="button" value="Restart Game" class="restartGameButton" id='restartGameButton'>
-
-  </section>
 
 
-
-      <div class="content">
-        <div class = "card unpaired"></div>
-        <div class = "card unpaired "></div>
-        <div class = "card unpaired"></div>
-        <div class = "card unpaired"></div>
-        <div class = "card unpaired"></div>
-        <div class = "card unpaired"></div>
-        <div class = "card unpaired"></div>
-        <div class = "card unpaired"></div>
-        <div class = "card unpaired"></div>
-        <div class = "card unpaired"></div>
-        <div class = "card unpaired"></div>
-        <div class = "card unpaired"></div>
-        <div class = "card unpaired"></div>
-        <div class = "card unpaired"></div>
-        <div class = "card unpaired"></div>
-        <div class = "card unpaired"></div>
-      </div>
-
-      <div class="winScreen">
-        <p> WINNER!!</p>
-        <p> Congratulations on this incredible achievement!</p>
-        <p> To play again, please press the restart game button</p>
-        <input type="button" value="Restart Game" class="restartGameButtonWinScreen">
-      </div>
-
-      <div class='lossScreen'>
-        <p> TRY AGAIN!!</p>
-        <p> You didn't find the pairs in time!</p>
-        <p> To try again, please press the restart game button</p>
-        <input type="button" value="Restart Game" class="restartGameButtonLossScreen">
-      </div>
+    </section>
 
 
 
-    </body>
-    </html>
+    <div class="content">
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired "></div>
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired"></div>
+      <div class = "card unpaired"></div>
+    </div>
+
+    <div class="winScreen">
+      <p> WINNER!!</p>
+      <p> Congratulations on this incredible achievement!</p>
+      <p> To play again, please press the restart game button</p>
+      <button class="nextLevel">Next Level</button>
+    </div>
+
+    <div class='lossScreen'>
+      <p> UNLUCKY!! TRY AGAIN!!</p>
+      <p> You didn't find the pairs in time!</p>
+      <p> Restart Game<br>To return to the homepage please press homepage</p>
+      <!-- <input type="button" value="Restart Game" class="restartGameButtonLossScreen"> -->
+      <button class="restart-current-level" data-level="1">Retry Current Level</button>
+      <button class="restart">Homepage</button>
+    </div>
+
+
+
+
+
+  </body>
+  </html>
