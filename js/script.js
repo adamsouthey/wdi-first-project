@@ -71,6 +71,12 @@ $(() => {
     },
 
     //Shuffle Deck
+    // Iterate over length of cards array x16 and produce a random number,set equal to random, number will be between 1&16
+    //store current i into app.cards, set into temp variable
+    //set app.cards to random
+    //set random to temp
+    //swap hard coded values in the cards array
+
     shuffle: () => {
       let random = 0;
       let temp = 0;
@@ -84,6 +90,7 @@ $(() => {
     },
 
     //Assign Cards Data Values
+    //Iterate over each card, pull index of card, assign data card value equal to app.cards of the index
     assignCards: () => {
       $('.card').each(function(index) {
         $(this).animate({opacity: 1}).addClass('unpaired').empty();
@@ -93,6 +100,7 @@ $(() => {
     },
 
     //Assign card value ID + selected class to card then checkMatch
+    //jquery bug - jQuery's data() api retrieve all the data attribute of an element- doesn't, use num
     clickHandlers: () => {
       $('.card').on('click', function () {
         const num = $(this).attr('data-card-value');
