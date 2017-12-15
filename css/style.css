@@ -386,7 +386,8 @@ body{
 
       @media only screen and (max-width: 735px) {
         .start {
-          font-size: 15px;
+          font-size: 12px;
+          padding: 1px;
 
         }
       }
@@ -406,7 +407,7 @@ body{
       @media only screen and (max-width: 735px) {
         button.restart {
 
-          font-size: 15px;
+          font-size: 10px;
           margin-top: 0px;
           text-align: center;
           margin: 0 auto;
@@ -417,7 +418,7 @@ body{
       @media only screen and (max-width: 735px) {
         .restart-current-level {
 
-          font-size: 15px;
+          font-size: 10px;
           margin-top: 10px;
           text-align: center;
           margin: 0 auto;
@@ -563,6 +564,7 @@ body{
             width: 200px;
             height: 150px;
             left: -260px;
+            opacity: .7;
           }
 
 
@@ -571,6 +573,6 @@ body{
               text-align: center;
               color: white;
               font-size: 10px;
-              animation: none;
+              opacity: 0
             }
           }
