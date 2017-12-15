@@ -407,7 +407,7 @@ body{
       @media only screen and (max-width: 735px) {
         button.restart {
 
-          font-size: 10px;
+          font-size: 20px;
           margin-top: 0px;
           text-align: center;
           margin: 0 auto;
@@ -451,6 +451,7 @@ body{
         @media only screen and (max-width: 735px) {
           .winScreen p {
             animation: none;
+            font-size: 20px;
           }
         }
         /*LOSS SCREEN*/
@@ -560,11 +561,11 @@ body{
           /* ANIMATION */
           .question-image {
             position: fixed;
-            margin-top: -10px;
+            margin-top: -2px;
             width: 200px;
             height: 150px;
             left: -260px;
-            opacity: .7;
+            opacity: .5;
           }
 
 
@@ -573,6 +574,6 @@ body{
               text-align: center;
               color: white;
               font-size: 10px;
-              opacity: 0
+              opacity: 0;
             }
           }

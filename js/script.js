@@ -10,13 +10,13 @@ $(() => {
 
     },
     '3': {
-      timePenalty: 2.5
-    },
-    '4': {
       timePenalty: 3
     },
+    '4': {
+      timePenalty: 4
+    },
     '5': {
-      timePenalty: 3.5
+      timePenalty: 5
     }
   };
 
@@ -29,8 +29,8 @@ $(() => {
     cards: [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8],
     currentLevel: null,
     initialise: () => {
-      $('.content, .left, .winScreen, .lossScreen, .clock').hide();
-      $('.welcome').show();
+      $('.content, .left, .welcome, .lossScreen, .clock').hide();
+      $('.winScreen').show();
 
 
       //Start Game Button from Welcome Screen. ChosenLevel = targetClick, level1 = data value 1 - apply timePenalty(Key): 1(value)
@@ -154,7 +154,6 @@ $(() => {
     //Time Reward Function
     timeReward: () => {
       seconds = seconds - app.currentLevel.correctGuess;
-
     }
 
   };
@@ -188,8 +187,6 @@ $(() => {
       });
     }, 10);
   });
-
-
 
 
   //TIMER
