@@ -18,6 +18,7 @@ $(() => {
     '5': {
       timePenalty: 5
     }
+
   };
 
   let score = 0;
@@ -114,8 +115,6 @@ $(() => {
             score += .5;
             app.timeReward();
             $('.player1Score').html(score + ' / 8');
-
-
           });
 
           $('.selected').each(function(){
@@ -143,7 +142,6 @@ $(() => {
         $('.clock').hide();
         $('.winScreen').show();
       }
-
     },
 
     //Time Penalty Function
@@ -155,7 +153,6 @@ $(() => {
     timeReward: () => {
       seconds = seconds - app.currentLevel.correctGuess;
     }
-
   };
 
 
@@ -167,7 +164,7 @@ $(() => {
   //? Animation
   $(function animation() {
     setInterval(function() {
-      $('.question-image').animate({ left: $(window).width() + 'px' }, 8000, 'linear', function() {
+      $('.question-image').animate({ left: $(window).width() + 'px' }, 1000, 'linear', function() {
         $(this).css({ left: - $(this).width() + 'px' });
       });
     }, 10);
@@ -175,14 +172,14 @@ $(() => {
 
   $(function animation() {
     setInterval(function() {
-      $('.question-image').animate({ left: $(window).width() + 'px' }, 1000, 'linear', function() {
+      $('.question-image').animate({ left: $(window).width() + 'px' }, 800, 'linear', function() {
         $(this).css({ left: - $(this).width() + 'px' });
       });
     }, 10);
   });
   $(function animation() {
     setInterval(function() {
-      $('.question-image').animate({ left: $(window).width() + 'px' }, 500, 'linear', function() {
+      $('.question-image').animate({ left: $(window).width() + 'px' }, 600, 'linear', function() {
         $(this).css({ left: - $(this).width() + 'px' });
       });
     }, 10);
@@ -190,7 +187,6 @@ $(() => {
 
 
   //TIMER
-  // var timeoutHandle;
 
   $('.startGameButton').on('click', function(){
     $('.content').show();
