@@ -54,7 +54,7 @@ $(() => {
       $restartCurrentLevel.on('click', function reload(e) {
         const chosenLevel = $(e.target).data('level');
         app.currentLevel = levels[chosenLevel];
-
+        app.shuffle();
         $('.welcome, .content, .winScreen, .lossScreen').hide();
         $('.clock, .left').show();
 
