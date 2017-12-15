@@ -29,8 +29,8 @@ $(() => {
     cards: [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8],
     currentLevel: null,
     initialise: () => {
-      $('.content, .left, .welcome, .lossScreen, .clock').hide();
-      $('.winScreen').show();
+      $('.content, .left, .winScreen, .lossScreen, .clock').hide();
+      $('.welcome').show();
 
 
       //Start Game Button from Welcome Screen. ChosenLevel = targetClick, level1 = data value 1 - apply timePenalty(Key): 1(value)
