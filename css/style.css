@@ -123,7 +123,7 @@ body{
           perspective-origin: 40% 400px;
           margin: 0 auto;
           float: right;
-          margin-top: 180px;
+          margin-top: 250px;
           font-size: 10px;
         }
       }
@@ -153,7 +153,7 @@ body{
 
       @media only screen and (max-width: 735px) {
         .unpaired {
-          font-size: 10px;
+          font-size: 20px;
         }
       }
 
