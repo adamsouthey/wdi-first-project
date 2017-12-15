@@ -22,7 +22,7 @@ Download or clone the Github repo
 [View on Github](https://github.com/adamsouthey/wdi-first-project)
 
 # HEROKU
-[View on Heroku] (https://obscure-sierra-50626.herokuapp.com/)
+[View on Heroku] (https://dashboard.heroku.com/apps/memarray-game)
 
 
 
