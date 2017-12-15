@@ -9,6 +9,7 @@ body{
   margin: 0 auto;
   background: url('https://wallup.net/wp-content/uploads/2016/05/25/339073-wood-timber-closeup-wooden_surface-texture-curved_wood.jpg');
   width: 100%;
+  background-repeat: no-repeat;
 }
 
 @media only screen and (max-width: 735px) {
@@ -84,7 +85,7 @@ body{
       h1 {
         font-family: 'Architects Daughter', cursive;
         text-align: center;
-        font-size: 50px;
+        font-size: 30px;
 
       }
 
@@ -129,18 +130,18 @@ body{
       }
 
       .card {
-        font-size: 80px;
+        font-size: 30px;
         margin: 5px;
         border-radius: 10px;
         background: #0F0F3A;
         color: white;
         text-align: center;
-        line-height: 150px;
+        line-height: 100px;
         font-weight: 600;
-        height: 195px;
-        width: 160px;
+        height: 165px;
+        width: 120px;
         transform: rotateX(30deg);
-        text-shadow: 4px 4px 8px yellow;
+        text-shadow: 2px 2px 4px yellow;
       }
 
       @media only screen and (max-width: 735px) {
@@ -153,11 +154,12 @@ body{
 
       @media only screen and (max-width: 735px) {
         .unpaired {
-          font-size: 20px;
+          font-size: 10px;
         }
       }
 
       .card:hover {
+
         -webkit-animation-name: pulse;
         animation-name: pulse;
         -webkit-animation-duration: 1s;
@@ -228,7 +230,7 @@ body{
 
       .rules{
         text-align: center;
-        font-size: 50px;
+        font-size: 30px;
         font-family: 'Architects Daughter', cursive;
       }
 
@@ -250,18 +252,22 @@ body{
 
       p{
         text-align: center;
-        font-size:26px;
+        font-size:20px;
+      }
+
+      .card .unpaired .selected{
+        width: 10px;
       }
 
       .startGameTag{
         color: yellow;
-        font-size:40px;
+        font-size:24px;
         margin: 0px;
         text-transform: uppercase;
       }
 
       .card p {
-        font-size: 90px;
+        font-size: 60px;
         margin: 5px;
         border-radius: 10px;
         background: #0F0F3A;
@@ -269,8 +275,8 @@ body{
         text-align: center;
         line-height: 150px;
         font-weight: 600;
-        height: 200px;
-        width: 175px;
+        height: 170px;
+        width: 115px;
         transform: rotateX(30deg);
         text-shadow: 4px 4px 8px yellow;
       }
@@ -303,7 +309,7 @@ body{
 
 
       #startGameButton{
-        font-size: 40px;
+        font-size: 200px;
         margin-top: 10px;
         text-align: center;
         flex-wrap: wrap;
@@ -332,11 +338,11 @@ body{
 
       /*GAMEBOARD TEXT*/
       .currentPlayer{
-        font-size: 40px;
+        font-size: 25px;
         margin: 0px;
       }
       .scoreText{
-        font-size: 40px;
+        font-size: 25px;
         margin: 0px;
 
       }
@@ -381,7 +387,7 @@ body{
       }
 
       .start{
-        font-size: 30px;
+        font-size: 20px;
         border-radius: 8px;
       }
 
