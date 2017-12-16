@@ -30,8 +30,9 @@ $(() => {
     cards: [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8],
     currentLevel: null,
     initialise: () => {
-      $('.winScreen, .lossScreen, .content, .left').hide();
+      $('.welcome, .lossScreen, .winScreen, .content, .left').hide();
       $('.welcome').show();
+
 
 
       //Start Game Button from Welcome Screen. ChosenLevel = targetClick, level1 = data value 1 - apply timePenalty(Key): 1(value)
@@ -57,6 +58,8 @@ $(() => {
         app.shuffle();
         $('.welcome, .content, .winScreen, .lossScreen').hide();
         $('.clock, .left').show();
+        $('body').removeClass('fail');
+        $('body').addClass('newBg');
 
         seconds = 60;
         score = 0;
@@ -145,10 +148,12 @@ $(() => {
     // Win Conditions Show Win Screen
     winCondition: () => {
       if($('.unpaired').length === 0){
+        $('body').addClass('winImage');
         $('.content').hide();
         $('.left').hide();
         $('.clock').hide();
         $('.winScreen').show();
+
       }
     },
 
@@ -165,6 +170,10 @@ $(() => {
 
 
   $('.restart').on('click', function() {
+    location.reload();
+  });
+
+  $('.restart2').on('click', function() {
     location.reload();
   });
 
@@ -213,6 +222,7 @@ $(() => {
           clearInterval(secondsInterval);
           $('.content, .left, .clock').hide();
           $('.lossScreen').show();
+          $('body').addClass('fail');
         }
       }, 1000);
     }

@@ -6,7 +6,7 @@
 }
 
 body{
-  width: 1200px;
+  width: 1382px;
   height:700px;
   background:url('Images/START.jpg');
   background-size: cover; /* or contain depending on what you want */
@@ -30,6 +30,30 @@ body.newBg{
   color: white;
 }
 
+body.winImage{
+  width: 1200px;
+  height:700px;
+  background:url('Images/party.png');
+  background-size: cover; /* or contain depending on what you want */
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align:center;
+  margin:0;
+  padding: 0;
+  color: red;
+}
+body.fail{
+  width: 1200px;
+  height:700px;
+  background:url('Images/tryagain.jpg');
+  background-size: cover; /* or contain depending on what you want */
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align:center;
+  margin:0;
+  padding: 0;
+  color: red;
+}
 @media only screen and (max-width: 735px) {
   body {
     text-align: center;
@@ -44,6 +68,8 @@ body.newBg{
   justify-content: center;
   margin: 0 auto;
   text-align: center;
+  font-size: 100px;
+  margin-right: 100px;
 
 }
 
@@ -260,7 +286,7 @@ p{
 
 .card .unpaired .selected{
   width: 10px;
-  color: ##383838;
+  color: #cccccc;
 }
 
 .startGameTag{
@@ -274,8 +300,8 @@ p{
   font-size: 60px;
   margin: 5px;
   border-radius: 10px;
-  background: #383838   ;
-  color: white;
+  background: #cccccc
+  color:white;
   text-align: center;
   line-height: 150px;
   font-weight: 600;
@@ -394,17 +420,30 @@ p{
 
 
 .restart-current-level{
-  font-size: 35px;
-  margin-bottom: 100px;
+  font-size: 30px;
+  margin-top: 500px;
+  margin-left: 850px;
   color: tint(#BADA55, 42%);
+
 }
 
 .restart{
-  font-size: 35px;
-
+  font-size: 30px;
+  margin: 0 auto;
+  margin-left: 850px;
+  margin-top: 50px;
   color: tint(#BADA55, 42%);
+}
+.restart2{
+  font-size: 30px;
+  margin: 0 auto;
+  margin-left: 150px;
+  margin-top: 50px;
+  color: tint(#BADA55, 42%);
+  display: block;
 
 }
+
 @media only screen and (max-width: 735px) {
   button.restart {
 
@@ -430,24 +469,20 @@ p{
 /*WIN SCREEN*/
 .winScreen{
   margin: 0 auto;
-  max-width: 80%;
-  padding: 20px;
-  flex-wrap: wrap;
+  margin-top: 100px;
+  max-width: 100%;
+  margin-left: 750px;
   justify-content: center;
-  perspective: 1000px;
-  perspective-origin: 50% 400px;
-  margin: 0 auto;
   text-align: center;
   border-radius:50%;
-  border: 2px solid #000;
-  background: #800000;
-  background-image: radial-gradient(farthest-corner at 40px 40px,
-    #f90 0%, #13e 100%);
+  color: white;
+  font-size: 20px;
   }
+
   .winScreen p {
-    font-size: 40px;
-    color: #0000ff;
-    animation: fontbulger 2s infinite;
+    font-size: 30px;
+    margin: 0 auto;
+    color: white;
   }
   @media only screen and (max-width: 735px) {
     .winScreen p {
@@ -467,30 +502,15 @@ p{
     perspective-origin: 50% 400px;
     margin: 0 auto;
     text-align: center;
-    border-radius:50%;
-    border: 2px solid #000;
-    background: #800000;
-    background-image: radial-gradient(farthest-corner at 40px 40px,
-      #f90 0%, #13e 100%);
+
       text-align: center;
     }
     .lossScreen p {
       font-size: 35px;
       color: #0000ff;
-      animation: fontbulger 2s infinite;
+
     }
 
-    @keyframes fontbulger {
-      0% {
-        font-size: 40px;
-      }
-      30% {
-        font-size: 60px;
-      }
-      100% {
-        font-size: 40px;
-      }
-    }
 
     @media only screen and (max-width: 735px) {
       .lossScreen {
@@ -578,3 +598,26 @@ p{
         opacity: 0;
       }
     }
+
+      /* NEON */
+
+      p {
+        text-align: center;
+        font-size: 20px;
+        margin: 20px 0 20px 0;
+      }
+
+
+      a {
+        text-decoration: none;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        transition: all 0.5s;
+        font-size: 70px;
+        color: white;
+      }
+
+
+      p a:hover {
+        color: red;
+      }
