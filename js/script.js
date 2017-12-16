@@ -30,7 +30,7 @@ $(() => {
     cards: [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8],
     currentLevel: null,
     initialise: () => {
-      $('.content, .left, .winScreen, .lossScreen, .clock').hide();
+      $('.winScreen, .lossScreen, .content, .left').hide();
       $('.welcome').show();
 
 
@@ -41,7 +41,7 @@ $(() => {
         $restartCurrentLevel.data('level', chosenLevel);
         app.currentLevel = levels[chosenLevel];
 
-        $('.welcome, .content, .winScreen, .lossScreen').hide();
+        $('.welcome, .winScreen, .lossScreen').hide();
         $('.clock, .left').show();
 
 
