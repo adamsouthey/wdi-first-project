@@ -40,8 +40,8 @@ $(() => {
         const chosenLevel = $(e.target).data('level');
         $restartCurrentLevel.data('level', chosenLevel);
         app.currentLevel = levels[chosenLevel];
-
-        $('.welcome, .winScreen, .lossScreen').hide();
+        $('body').addClass('newBg');
+        $('.welcome').hide();
         $('.clock, .left').show();
 
 
@@ -198,6 +198,7 @@ $(() => {
 
   $('.startGameButton').on('click', function(){
     $('.content').show();
+
 
     console.log(app.currentLevel.timePenalty);
 

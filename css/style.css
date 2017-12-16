@@ -15,11 +15,20 @@ body{
   text-align:center;
   margin:0;
   padding: 0;
-  margin-top:
-
-
 }
 
+body.newBg{
+  width: 1200px;
+  height:700px;
+  background:url('Images/contentimg.png');
+  background-size: cover; /* or contain depending on what you want */
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align:center;
+  margin:0;
+  padding: 0;
+  color: white;
+}
 
 @media only screen and (max-width: 735px) {
   body {
@@ -97,21 +106,20 @@ h1 {
 .content {
   display: flex;
   max-width: 60%;
-  padding: 15px;
   flex-wrap: wrap;
   justify-content: center;
   perspective: 1000px;
   perspective-origin: 40% 400px;
-  margin: 0 auto;
+
   float: right;
-  margin-top: -10px;
+  margin-top: 1px;
+  margin-right: -120px;
 }
 
 @media only screen and (max-width: 735px) {
   .content {
     display: flex;
     max-width: 100%;
-    padding: 0px;
     flex-wrap: wrap;
     justify-content: center;
     perspective: 1000px;
@@ -126,13 +134,13 @@ h1 {
 .card {
   font-size: 30px;
   margin: 5px;
-  border-radius: 10px;
-  background: #0F0F3A;
+  border-radius: 5px;
+  background: #383838   ;
   color: white;
   text-align: center;
   line-height: 100px;
   font-weight: 600;
-  height: 165px;
+  height: 160px;
   width: 120px;
   transform: rotateX(30deg);
   text-shadow: 2px 2px 4px yellow;
@@ -207,8 +215,9 @@ h1 {
 /*GAMEBOARDINSTRUCTIONS, NAME, PAIRS MATCHED AND TIME*/
 .left{
   margin-left:40px;
+  margin-top: 40px;
   float: left;
-  max-width: 35%;
+  max-width: 40%;
   position: fixed;
 }
 @media only screen and (max-width: 735px) {
@@ -251,6 +260,7 @@ p{
 
 .card .unpaired .selected{
   width: 10px;
+  color: ##383838;
 }
 
 .startGameTag{
@@ -264,7 +274,7 @@ p{
   font-size: 60px;
   margin: 5px;
   border-radius: 10px;
-  background: #0F0F3A;
+  background: #383838   ;
   color: white;
   text-align: center;
   line-height: 150px;
@@ -294,20 +304,14 @@ p{
 
 /*BUTTONS*/
 
-.buttons {
-  text-align: center;
+
+
+.startGameButton{
   font-size: 30px;
-  color: black;
-}
-
-
-
-#startGameButton{
-  font-size: 20px;
-  margin-top: 10px;
   text-align: center;
-  flex-wrap: wrap;
   margin: 0 auto;
+  border-radius: 20px;
+  padding: 1px;
 }
 
 @media only screen and (max-width: 735px) {
@@ -334,6 +338,7 @@ p{
 .currentPlayer{
   font-size: 25px;
   margin: 0px;
+  margin-top: 10px;
 }
 .scoreText{
   font-size: 25px;
@@ -344,17 +349,17 @@ p{
 .player1Score {
   font-size: 40px;
   margin: 0px;
-  color: white;
+  color: yellow;
 }
 
 #timer{
   font-size: 50px;
-  color: white;
+  color: yellow;
 }
 
 .levelButtons{
   text-align: center;
-  padding: px;
+  padding: 0px;
   font-size: 30px;
   margin-top: 20px;
 }
@@ -383,6 +388,7 @@ p{
 .start{
   font-size: 20px;
   border-radius: 8px;
+
 }
 
 
@@ -509,7 +515,7 @@ p{
 
     .targetName{
       font-size: 40px;
-      color: white;
+      color: yellow;
       margin: 0px;
     }
 
@@ -555,13 +561,13 @@ p{
       }
     }
     /* ANIMATION */
-    .question-image {
-      margin-top: -2px;
-      width: 150px;
-      height: 150px;
-      left: -260px;
-      opacity: 0.5;
-    }
+    /* .question-image {
+    margin-top: -2px;
+    width: 150px;
+    height: 150px;
+    left: -260px;
+    opacity: 0.5;
+    } */
 
 
     @media only screen and (max-width: 735px) {
