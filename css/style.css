@@ -56,7 +56,15 @@ body.fail{
 }
 @media only screen and (max-width: 735px) {
   body {
-    text-align: center;
+
+    height:320px;
+    width:568px;
+    background:url('Images/M-1.png');
+    background-size: cover; /* or contain depending on what you want */
+    /* background-position: center center; */
+    background-repeat: no-repeat;
+    text-align:center;
+    padding: 0;
   }
 }
 
@@ -75,15 +83,13 @@ body.fail{
 
 @media only screen and (max-width: 735px) {
   .welcome {
-    max-width: 90%;
+    max-width: 40%;
     padding: 2px;
     flex-wrap: wrap;
     justify-content: center;
-    perspective: 10px;
-    perspective-origin: 20% 30px;
     margin: 0 auto;
-    margin-bottom: 100px;
     text-align: center;
+    margin-top: 15px;
   }
 }
 body .welcome{
@@ -92,6 +98,8 @@ body .welcome{
 @media only screen and (max-width: 735px) {
   body .welcome {
     margin-top: 20px;
+    margin-right: 30px;
+
   }
 }
 
@@ -105,9 +113,9 @@ body .welcome{
 
 @media only screen and (max-width: 735px) {
   .welcome p {
-    font-size: 15px;
+    font-size: 12px;
     margin-bottom: 10px;
-    padding: 10px;
+
   }
 }
 h1 {
@@ -256,6 +264,30 @@ h1 {
     margin-right: 70px;
   }
 }
+.question-image {
+
+    top: 95%;
+    left: -20px;
+    z-index: 10;
+    height: 150px;
+    width: 120px;
+    margin-top: 50px;
+    opacity: 0.5;
+    background-color: red;
+    animation-duration: 2s;
+    animation-name: goRight;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes goRight {
+  from {
+    transform: translate(0,0);
+  }
+
+  to {
+    transform: translate(1920px,0);
+  }
+}
 
 .rules{
   text-align: center;
@@ -393,19 +425,9 @@ p{
   .levelButtons {
     text-align: center;
     padding: 0px;
-    font-size: 15px;
+    font-size: 12px;
     margin-bottom: 30px;
-
-
-  }
-}
-
-@media only screen and (max-width: 735px) {
-  .start {
-    text-align: center;
-    padding: 0px;
-    font-size: 25px;
-    margin-bottom: 30px;
+    margin: 0px;
 
 
   }
@@ -416,6 +438,18 @@ p{
   border-radius: 8px;
 
 }
+@media only screen and (max-width: 735px) {
+  .start {
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 30px;
+    padding: 2px;
+
+
+  }
+}
+
+
 
 
 
@@ -556,7 +590,7 @@ p{
         display: flex;
         padding: 5px;
         margin: 0 auto;
-        font-size: 10px;
+        font-size: 12px;
         margin-top: 10px;
         background-color: grey;
       }
@@ -580,14 +614,8 @@ p{
         font-size: 100px;
       }
     }
-    /* ANIMATION */
-    /* .question-image {
-    margin-top: -2px;
-    width: 150px;
-    height: 150px;
-    left: -260px;
-    opacity: 0.5;
-    } */
+    /* ANIMATION  */
+
 
 
     @media only screen and (max-width: 735px) {

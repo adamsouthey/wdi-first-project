@@ -68,7 +68,7 @@ $(() => {
         const name = $('#playerName').val();
         $('.player1Score').html('0 / 8');
         $('.targetName').html(name);
-        app.assignCards();
+        // app.assignCards();
       });
 
     },
@@ -96,7 +96,6 @@ $(() => {
     //Iterate over each card, pull index of card, assign data card value equal to app.cards of the index
     assignCards: () => {
       $('.card').each(function(index) {
-        $(this).animate({opacity: 1}).addClass('unpaired').empty();
         $(this).attr('data-card-value', app.cards[index]);
       });
       app.clickHandlers();
@@ -177,30 +176,6 @@ $(() => {
     location.reload();
   });
 
-
-  //? Animation
-  $(function animation() {
-    setInterval(function() {
-      $('.question-image').animate({ left: $(window).width() + 'px' }, 1000, 'linear', function() {
-        $(this).css({ left: - $(this).width() + 'px' });
-      });
-    }, 10);
-  });
-
-  $(function animation() {
-    setInterval(function() {
-      $('.question-image').animate({ left: $(window).width() + 'px' }, 800, 'linear', function() {
-        $(this).css({ left: - $(this).width() + 'px' });
-      });
-    }, 10);
-  });
-  $(function animation() {
-    setInterval(function() {
-      $('.question-image').animate({ left: $(window).width() + 'px' }, 600, 'linear', function() {
-        $(this).css({ left: - $(this).width() + 'px' });
-      });
-    }, 10);
-  });
 
 
   //TIMER
