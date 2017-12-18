@@ -33,7 +33,7 @@ body.newBg{
 body.winImage{
   width: 1200px;
   height:700px;
-  background:url('Images/party.png');
+  background:url('Images/winner.png');
   background-size: cover; /* or contain depending on what you want */
   background-position: center center;
   background-repeat: no-repeat;
@@ -59,7 +59,47 @@ body.fail{
 
     height:320px;
     width:568px;
-    background:url('Images/M-1.png');
+    background:url('Images/mobileWelcomeScreen.png');
+    background-size: cover; /* or contain depending on what you want */
+    /* background-position: center center; */
+    background-repeat: no-repeat;
+    text-align:center;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 735px) {
+  body.newBg {
+
+    height:320px;
+    width:568px;
+    background:url('Images/mobileGameScreen.png');
+    background-size: cover; /* or contain depending on what you want */
+    /* background-position: center center; */
+    background-repeat: no-repeat;
+    text-align:center;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  body.winImage {
+
+    height:220px;
+    width:568px;
+    background:url('Images/mobileWinScreen.png');
+    background-size: cover; /* or contain depending on what you want */
+    /* background-position: center center; */
+    background-repeat: no-repeat;
+    text-align:center;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 735px) {
+  body.fail{
+
+    height:220px;
+    width:568px;
+    background:url('Images/tryagain.jpg');
     background-size: cover; /* or contain depending on what you want */
     /* background-position: center center; */
     background-repeat: no-repeat;
@@ -97,8 +137,8 @@ body .welcome{
 }
 @media only screen and (max-width: 735px) {
   body .welcome {
-    margin-top: 20px;
-    margin-right: 30px;
+    margin-top: 25px;
+    margin-right: 40px;
 
   }
 }
@@ -153,15 +193,16 @@ h1 {
 @media only screen and (max-width: 735px) {
   .content {
     display: flex;
-    max-width: 100%;
+    max-width: 50%;
     flex-wrap: wrap;
     justify-content: center;
     perspective: 1000px;
     perspective-origin: 40% 400px;
     margin: 0 auto;
     float: right;
-    margin-top: 250px;
-    font-size: 10px;
+    margin-top: 15px;
+    margin-right: 40px;
+    font-size: 8px;
   }
 }
 
@@ -183,14 +224,15 @@ h1 {
 @media only screen and (max-width: 735px) {
   .card {
     font-size: 8px;
-    height: 45px;
-    width: 40px;
+    height: 60px;
+    width: 45px;
   }
 }
 
 @media only screen and (max-width: 735px) {
   .unpaired {
     font-size: 10px;
+    background: #333333;
   }
 }
 
@@ -257,9 +299,9 @@ h1 {
 @media only screen and (max-width: 735px) {
   .left {
     font-size: 10px;
-    height: 10px;
-    max-width: 100%;
-    margin-left:70px;
+    margin-top: 20px;
+    max-width: 35%;
+    margin-left:20px;
     float: center;
     margin-right: 70px;
   }
@@ -308,7 +350,8 @@ h1 {
   .left p{
     text-align: center;
     font-size:10px;
-  }
+    margin: 4px;
+}
 }
 
 p{
@@ -348,19 +391,18 @@ p{
     font-size: 40px;
     margin: px;
     border-radius: 10px;
-    background: #0F0F3A;
-    color: white;
     text-align: center;
     line-height: 50px;
     font-weight: 600;
     height: 20px;
     width: 30px;
     transform: rotateX(30deg);
-    text-shadow: 4px 4px 8px yellow;
+    text-shadow: 4px 4px 8px #FD5F00;
   }
 }
 
 /*BUTTONS*/
+
 
 
 
@@ -373,14 +415,17 @@ p{
 }
 
 @media only screen and (max-width: 735px) {
-  #startGameButton {
+  .startGameButton {
 
-    font-size: 10px;
+    font-size: 8px;
     margin-top: 10px;
     text-align: center;
     margin: 0 auto;
+    padding: 2px;
+
   }
 }
+
 
 #restartGameButton{
   font-size: 40px;
@@ -428,10 +473,9 @@ p{
     font-size: 12px;
     margin-bottom: 30px;
     margin: 0px;
-
-
   }
 }
+
 
 .start{
   font-size: 20px;
@@ -449,17 +493,23 @@ p{
   }
 }
 
-
-
-
-
 .restart-current-level{
   font-size: 30px;
   margin-top: 500px;
   margin-left: 850px;
   color: tint(#BADA55, 42%);
-
 }
+@media only screen and (max-width: 735px) {
+  .restart-current-level {
+    font-size: 20px;
+    margin-right: 100px;
+    margin-top: 100px;
+    margin: 0 auto;
+    float: center;
+
+  }
+}
+
 
 .restart{
   font-size: 30px;
@@ -471,33 +521,62 @@ p{
 .restart2{
   font-size: 30px;
   margin: 0 auto;
-  margin-left: 150px;
-  margin-top: 50px;
+  float: right;
+  margin-right: 150px;
+  margin-top: 300px;
   color: tint(#BADA55, 42%);
   display: block;
-
+}
+.restart3{
+  display: none;
+}
+.restart4{
+  display: none;
 }
 
 @media only screen and (max-width: 735px) {
-  button.restart {
+.restart {
+  font-size: 25px;
+  margin: 0 auto;
 
-    font-size: 10px;
-    margin-top: 0px;
-    text-align: center;
-    margin: 0 auto;
+  margin-right: 140px;
+  display: block;
 
+  margin-top: 10px;
+  color: tint(#BADA55, 42%);
   }
 }
 
 @media only screen and (max-width: 735px) {
-  .restart-current-level {
+  .restart2 {
+    display: none;
 
-    font-size: 10px;
-    margin-top: 10px;
-    text-align: center;
-    margin: 0 auto;
   }
 }
+@media only screen and (max-width: 735px) {
+  .restart3 {
+      color: black;
+      font-size: 10px;
+  margin-left: -370px;
+  display: block;
+  border: 1px solid white;
+  }
+}
+@media only screen and (max-width: 735px) {
+  .restart4 {
+      color: black;
+      font-size: 10px;
+  margin-left: -370px;
+  display: block;
+  border: 1px solid white;
+  }
+}
+
+
+
+
+
+
 
 
 /*WIN SCREEN*/
@@ -510,20 +589,15 @@ p{
   text-align: center;
   border-radius:50%;
   color: white;
-  font-size: 20px;
+  font-size: 200px;
+  }
+  p #winScreenMessage{
+    font-size: 100px;
   }
 
-  .winScreen p {
-    font-size: 30px;
-    margin: 0 auto;
-    color: white;
-  }
-  @media only screen and (max-width: 735px) {
-    .winScreen p {
-      animation: none;
-      font-size: 20px;
-    }
-  }
+
+
+
   /*LOSS SCREEN*/
 
   .lossScreen{
@@ -550,8 +624,10 @@ p{
       .lossScreen {
         max-width: 80%;
         margin: 0 auto;
+        margin-left: -90px;
+        margin-top: 20px;
         text-align: center;
-        margin-top: 50px;
+
       }
     }
 
@@ -588,9 +664,9 @@ p{
       #playerName {
         text-align: center;
         display: flex;
-        padding: 5px;
+        padding: 2px;
         margin: 0 auto;
-        font-size: 12px;
+        font-size: 10px;
         margin-top: 10px;
         background-color: grey;
       }
@@ -604,7 +680,7 @@ p{
     @media only screen and (max-width: 735px) {
       #timer{
         text-align: center;
-        color: white;
+        color: yellow;
         font-size: 10px;
       }
     }

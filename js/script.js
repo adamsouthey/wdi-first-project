@@ -30,7 +30,7 @@ $(() => {
     cards: [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8],
     currentLevel: null,
     initialise: () => {
-      $('.welcome, .lossScreen, .winScreen, .content, .left').hide();
+      $('.lossScreen, .winScreen, .content, .left').hide();
       $('.welcome').show();
 
 
@@ -55,11 +55,12 @@ $(() => {
       $restartCurrentLevel.on('click', function reload(e) {
         const chosenLevel = $(e.target).data('level');
         app.currentLevel = levels[chosenLevel];
-        app.shuffle();
+
         $('.welcome, .content, .winScreen, .lossScreen').hide();
         $('.clock, .left').show();
         $('body').removeClass('fail');
         $('body').addClass('newBg');
+
 
         seconds = 60;
         score = 0;
@@ -68,7 +69,7 @@ $(() => {
         const name = $('#playerName').val();
         $('.player1Score').html('0 / 8');
         $('.targetName').html(name);
-        // app.assignCards();
+        app.assignCards();
       });
 
     },
@@ -96,6 +97,7 @@ $(() => {
     //Iterate over each card, pull index of card, assign data card value equal to app.cards of the index
     assignCards: () => {
       $('.card').each(function(index) {
+        $(this).animate({opacity: 1}).addClass('unpaired').empty();
         $(this).attr('data-card-value', app.cards[index]);
       });
       app.clickHandlers();
@@ -175,6 +177,9 @@ $(() => {
   $('.restart2').on('click', function() {
     location.reload();
   });
+  $('.restart3').on('click', function() {
+    location.reload();
+  });
 
 
 
@@ -182,7 +187,6 @@ $(() => {
 
   $('.startGameButton').on('click', function(){
     $('.content').show();
-
 
     console.log(app.currentLevel.timePenalty);
 
