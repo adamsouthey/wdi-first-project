@@ -9,10 +9,6 @@ To create this project I used the following technologies:
 * Github
 * Heroku
 
-# Screenshot
-![](/Users/adamsouthey/desktop/Screenshot 2017-12-14 20.13.44.png)
-A game in progress
-
 
 
 # Installation Instructions
@@ -35,8 +31,6 @@ I initially tried to set the level of difficulty to multiple buttons via multipl
 
 
 # Improvements
-Due to time restraints CSS was sacrificed for this project.
-
 The UI could be more user friendly.
 
 I would like to include more levels of difficulty perhaps following an incorrect guess have the two card elements switch places and flip back over.
