@@ -30,6 +30,7 @@ For this project I have used the following technologies:
 My original wireframes are similar to how the project actually turned out:  
 
 Wireframes:
+
 <img width="695" alt="screenshot 2018-03-20 16 04 30" src="https://user-images.githubusercontent.com/32818032/37666828-69328494-2c58-11e8-8e19-6b590c34f118.png">
 
 ---
