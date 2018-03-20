@@ -6,7 +6,7 @@
 
 Memarray Game is a card game in which all of the cards are laid face down on the screen. A user must then click on a card to reveal their value and find the matching pairs before the time expires.
 
-[**Heroku**](https://dashboard.heroku.com/apps/memarray-game)
+[**Heroku**](https://memarray-game.herokuapp.com/)
 
 [**GitHub Repository**](https://github.com/adamsouthey/wdi-first-project)   
 
