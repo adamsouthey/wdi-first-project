@@ -44,6 +44,16 @@ Trello Screenshot:
 
 ---
 
+### My Project screenshots
+
+Splash Page:
+<img width="1370" alt="1" src="https://user-images.githubusercontent.com/32818032/38094277-44f5334c-3365-11e8-9402-2b74e997e0c6.png">
+
+Game Page:
+<img width="1368" alt="2" src="https://user-images.githubusercontent.com/32818032/38094302-56fb2628-3365-11e8-8b97-ab74bf28afc8.png">
+
+---
+
 
 # Challenges
 Using setTimeout instead of clearInterval caused time penalties to carry over and stack following a level restart.
