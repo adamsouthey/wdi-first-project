@@ -4,22 +4,32 @@
   margin: 10;
 
 }
+html{
+  width: 100%;
+  height:100%;
+}
 
 body{
-  width: 1382px;
-  height:700px;
-  background:url('Images/START.jpg');
-  background-size: cover; /* or contain depending on what you want */
-  background-position: center center;
-  background-repeat: no-repeat;
-  text-align:center;
-  margin:0;
-  padding: 0;
+  background:url('Images/mobileGameScreen.png');
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  left: 0px;
+  top: 200px;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.7;
+  background-size: cover;
+  background-position: center;
 }
 
 body.newBg{
-  width: 1200px;
-  height:700px;
+  width: 100%;
+  height:100%;
   background:url('Images/contentimg.png');
   background-size: cover; /* or contain depending on what you want */
   background-position: center center;
@@ -31,8 +41,8 @@ body.newBg{
 }
 
 body.winImage{
-  width: 1200px;
-  height:700px;
+  width: 100%;
+  height:100%;
   background:url('Images/winner.png');
   background-size: cover; /* or contain depending on what you want */
   background-position: center center;
@@ -43,8 +53,8 @@ body.winImage{
   color: red;
 }
 body.fail{
-  width: 1200px;
-  height:700px;
+  width: 100%;
+  height:100%;
   background:url('Images/tryagain.jpg');
   background-size: cover; /* or contain depending on what you want */
   background-position: center center;
@@ -54,160 +64,51 @@ body.fail{
   padding: 0;
   color: red;
 }
-@media only screen and (max-width: 735px) {
-  body {
-
-    height:320px;
-    width:568px;
-    background:url('Images/mobileWelcomeScreen.png');
-    background-size: cover; /* or contain depending on what you want */
-    /* background-position: center center; */
-    background-repeat: no-repeat;
-    text-align:center;
-    padding: 0;
-  }
-}
-@media only screen and (max-width: 735px) {
-  body.newBg {
-
-    height:320px;
-    width:568px;
-    background:url('Images/mobileGameScreen.png');
-    background-size: cover; /* or contain depending on what you want */
-    /* background-position: center center; */
-    background-repeat: no-repeat;
-    text-align:center;
-    padding: 0;
-  }
-}
-
-@media only screen and (max-width: 735px) {
-  body.winImage {
-
-    height:220px;
-    width:568px;
-    background:url('Images/mobileWinScreen.png');
-    background-size: cover; /* or contain depending on what you want */
-    /* background-position: center center; */
-    background-repeat: no-repeat;
-    text-align:center;
-    padding: 0;
-  }
-}
-@media only screen and (max-width: 735px) {
-  body.fail{
-
-    height:220px;
-    width:568px;
-    background:url('Images/tryagain.jpg');
-    background-size: cover; /* or contain depending on what you want */
-    /* background-position: center center; */
-    background-repeat: no-repeat;
-    text-align:center;
-    padding: 0;
-  }
-}
 
 /*WELCOME SCREEN*/
 .welcome {
   color: white;
-  max-width: 100%;
   float: right;
-  justify-content: center;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 100px;
-  margin-right: 100px;
-
 }
 
-@media only screen and (max-width: 735px) {
-  .welcome {
-    max-width: 40%;
-    padding: 2px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 15px;
-  }
-}
 body .welcome{
   margin-top: 120px;
 }
-@media only screen and (max-width: 735px) {
-  body .welcome {
-    margin-top: 25px;
-    margin-right: 40px;
-
-  }
-}
 
 .welcome p{
-  font-size: 25px;
+  font-size: 2.5vw;
   margin-bottom: 40px;
   margin: 20px;
   text-transform: uppercase;
-
 }
 
-@media only screen and (max-width: 735px) {
-  .welcome p {
-    font-size: 12px;
-    margin-bottom: 10px;
-
-  }
-}
 h1 {
   font-family: 'Architects Daughter', cursive;
   text-align: center;
   font-size: 30px;
   color: white;
-
 }
 
-@media only screen and (max-width: 735px) {
-  h1 {
-    font-family: 'Architects Daughter', cursive;
-    text-align: center;
-    font-size: 20px;
-    animation: none;
-  }
+p{
+  text-align: center;
+  font-size:1.5vw;
 }
-
-
 
 .content {
+  margin-top: 100px;
   display: flex;
-  max-width: 60%;
+  max-width: 80%;
+
+  margin: 0 auto;
   flex-wrap: wrap;
   justify-content: center;
   perspective: 1000px;
   perspective-origin: 40% 400px;
 
-  float: right;
-  margin-top: 1px;
-  margin-right: -120px;
-}
 
-@media only screen and (max-width: 735px) {
-  .content {
-    display: flex;
-    max-width: 50%;
-    flex-wrap: wrap;
-    justify-content: center;
-    perspective: 1000px;
-    perspective-origin: 40% 400px;
-    margin: 0 auto;
-    float: right;
-    margin-top: 15px;
-    margin-right: 40px;
-    font-size: 8px;
-  }
 }
 
 .card {
-  font-size: 30px;
   margin: 5px;
   border-radius: 5px;
   background: #383838   ;
@@ -215,26 +116,12 @@ h1 {
   text-align: center;
   line-height: 100px;
   font-weight: 600;
-  height: 160px;
-  width: 120px;
+  height: 15vh;
+  width: 10vw;
   transform: rotateX(30deg);
   text-shadow: 2px 2px 4px yellow;
 }
 
-@media only screen and (max-width: 735px) {
-  .card {
-    font-size: 8px;
-    height: 60px;
-    width: 45px;
-  }
-}
-
-@media only screen and (max-width: 735px) {
-  .unpaired {
-    font-size: 10px;
-    background: #333333;
-  }
-}
 
 .card:hover {
 
@@ -248,21 +135,6 @@ h1 {
   animation-iteration-count: infinite;
 }
 
-@media only screen and (max-width: 735px) {
-  .card:hover {
-    font-size: 10px;
-    height: 50px;
-    width: 50px;
-    -webkit-animation-name: pulse;
-    animation-name: pulse;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-  }
-}
 
 @-webkit-keyframes pulse {
   25% {
@@ -290,38 +162,26 @@ h1 {
 
 /*GAMEBOARDINSTRUCTIONS, NAME, PAIRS MATCHED AND TIME*/
 .left{
-  margin-left:40px;
-  margin-top: 40px;
-  float: left;
-  max-width: 40%;
-  position: fixed;
+  max-width: 100%;
+  max-height: 40%;
+  margin-top :20px;
 }
-@media only screen and (max-width: 735px) {
-  .left {
-    font-size: 10px;
-    margin-top: 20px;
-    max-width: 35%;
-    margin-left:20px;
-    float: center;
-    margin-right: 70px;
-  }
-}
+
 .question-image {
+  top: 95%;
+  left: -20px;
+  z-index: 10;
+  height: 150px;
+  width: 120px;
+  margin-top: 50px;
+  opacity: 0.5;
+  background-color: red;
+  animation-duration: 2s;
+  animation-name: goRight;
+  animation-iteration-count: infinite;
+}
 
-    top: 95%;
-    left: -20px;
-    z-index: 10;
-    height: 150px;
-    width: 120px;
-    margin-top: 50px;
-    opacity: 0.5;
-    background-color: red;
-    animation-duration: 2s;
-    animation-name: goRight;
-    animation-iteration-count: infinite;
-  }
-
-  @keyframes goRight {
+@keyframes goRight {
   from {
     transform: translate(0,0);
   }
@@ -333,31 +193,11 @@ h1 {
 
 .rules{
   text-align: center;
-  font-size: 30px;
+  font-size: 1.5vw;
   font-family: 'Architects Daughter', cursive;
 }
 
-@media only screen and (max-width: 735px) {
-  .rules{
-    text-align:center;
-    margin: 0 auto;
-    font-size: 10px;
-    font-family: 'Architects Daughter', cursive;
-  }
-}
 
-@media only screen and (max-width: 735px) {
-  .left p{
-    text-align: center;
-    font-size:10px;
-    margin: 4px;
-}
-}
-
-p{
-  text-align: center;
-  font-size:20px;
-}
 
 .card .unpaired .selected{
   width: 10px;
@@ -366,40 +206,22 @@ p{
 
 .startGameTag{
   color: yellow;
-  font-size:24px;
+  font-size:1.5vw;
   margin: 0px;
   text-transform: uppercase;
 }
 
 .card p {
-  font-size: 60px;
-  margin: 5px;
-  border-radius: 10px;
-  background: #cccccc
-  color:white;
+  font-size: 4vw;
   text-align: center;
-  line-height: 150px;
-  font-weight: 600;
-  height: 170px;
-  width: 115px;
+  margin: 0 auto;
+  border-radius: 10px;
+  height: 2.2vw;
+  width: 1.8vw;
   transform: rotateX(30deg);
   text-shadow: 4px 4px 8px yellow;
 }
 
-@media only screen and (max-width: 735px) {
-  .card p{
-    font-size: 40px;
-    margin: px;
-    border-radius: 10px;
-    text-align: center;
-    line-height: 50px;
-    font-weight: 600;
-    height: 20px;
-    width: 30px;
-    transform: rotateX(30deg);
-    text-shadow: 4px 4px 8px #FD5F00;
-  }
-}
 
 /*BUTTONS*/
 
@@ -407,24 +229,14 @@ p{
 
 
 .startGameButton{
-  font-size: 30px;
+  font-size:1.5vw;
   text-align: center;
   margin: 0 auto;
   border-radius: 20px;
   padding: 1px;
 }
 
-@media only screen and (max-width: 735px) {
-  .startGameButton {
 
-    font-size: 8px;
-    margin-top: 10px;
-    text-align: center;
-    margin: 0 auto;
-    padding: 2px;
-
-  }
-}
 
 
 #restartGameButton{
@@ -439,24 +251,24 @@ p{
 
 /*GAMEBOARD TEXT*/
 .currentPlayer{
-  font-size: 25px;
+  font-size:1.5vw;
   margin: 0px;
   margin-top: 10px;
 }
 .scoreText{
-  font-size: 25px;
+  font-size:1.5vw;
   margin: 0px;
 
 }
 
 .player1Score {
-  font-size: 40px;
+  font-size:2vw;
   margin: 0px;
   color: yellow;
 }
 
 #timer{
-  font-size: 50px;
+  font-size:2vw;
   color: yellow;
 }
 
@@ -466,48 +278,17 @@ p{
   font-size: 30px;
   margin-top: 20px;
 }
-@media only screen and (max-width: 735px) {
-  .levelButtons {
-    text-align: center;
-    padding: 0px;
-    font-size: 12px;
-    margin-bottom: 30px;
-    margin: 0px;
-  }
-}
-
 
 .start{
-  font-size: 20px;
-  border-radius: 8px;
-
+  font-size: 19px;
 }
-@media only screen and (max-width: 735px) {
-  .start {
-    text-align: center;
-    font-size: 10px;
-    margin-bottom: 30px;
-    padding: 2px;
 
-
-  }
-}
 
 .restart-current-level{
   font-size: 30px;
   margin-top: 500px;
   margin-left: 850px;
   color: tint(#BADA55, 42%);
-}
-@media only screen and (max-width: 735px) {
-  .restart-current-level {
-    font-size: 20px;
-    margin-right: 100px;
-    margin-top: 100px;
-    margin: 0 auto;
-    float: center;
-
-  }
 }
 
 
@@ -534,47 +315,6 @@ p{
   display: none;
 }
 
-@media only screen and (max-width: 735px) {
-.restart {
-  font-size: 25px;
-  margin: 0 auto;
-
-  margin-right: 140px;
-  display: block;
-
-  margin-top: 10px;
-  color: tint(#BADA55, 42%);
-  }
-}
-
-@media only screen and (max-width: 735px) {
-  .restart2 {
-    display: none;
-
-  }
-}
-@media only screen and (max-width: 735px) {
-  .restart3 {
-      color: black;
-      font-size: 10px;
-  margin-left: -370px;
-  display: block;
-  border: 1px solid white;
-  }
-}
-@media only screen and (max-width: 735px) {
-  .restart4 {
-      color: black;
-      font-size: 10px;
-  margin-left: -370px;
-  display: block;
-  border: 1px solid white;
-  }
-}
-
-
-
-
 
 
 
@@ -582,146 +322,84 @@ p{
 /*WIN SCREEN*/
 .winScreen{
   margin: 0 auto;
-  margin-top: 100px;
+  margin-bottom: 100px;
   max-width: 100%;
-  margin-left: 750px;
   justify-content: center;
   text-align: center;
   border-radius:50%;
   color: white;
   font-size: 200px;
-  }
-  p #winScreenMessage{
-    font-size: 100px;
-  }
+}
+p #winScreenMessage{
+  font-size: 100px;
+}
 
 
 
 
-  /*LOSS SCREEN*/
+/*LOSS SCREEN*/
 
-  .lossScreen{
-    margin: 0 auto;
-    max-width: 80%;
-    padding: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-    perspective: 1000px;
-    perspective-origin: 50% 400px;
-    margin: 0 auto;
-    text-align: center;
+.lossScreen{
+  margin: 0 auto;
+  max-width: 80%;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  perspective: 1000px;
+  perspective-origin: 50% 400px;
+  margin: 0 auto;
+  text-align: center;
 
-      text-align: center;
-    }
-    .lossScreen p {
-      font-size: 35px;
-      color: #0000ff;
+  text-align: center;
+}
+.lossScreen p {
+  font-size: 35px;
+  color: #0000ff;
 
-    }
+}
 
+.targetName{
+  font-size: 40px;
+  color: yellow;
+  margin: 0px;
+}
 
-    @media only screen and (max-width: 735px) {
-      .lossScreen {
-        max-width: 80%;
-        margin: 0 auto;
-        margin-left: -90px;
-        margin-top: 20px;
-        text-align: center;
-
-      }
-    }
-
-    @media only screen and (max-width: 735px) {
-      .lossScreen p {
-
-        font-size: 15px;
-        margin-top: 10px;
-        text-align: center;
-        margin: 0 auto;
-        padding: 10px;
-        animation: none;
-      }
-    }
-
-    .targetName{
-      font-size: 40px;
-      color: yellow;
-      margin: 0px;
-    }
-
-    #playerName {
-      text-align: center;
-      display: flex;
-      padding: 4px;
-      margin: 0 auto;
-      font-size: 18px;
-      margin-top: 10px;
-      background-color: white;
-      color: #B12929;
-    }
-
-    @media only screen and (max-width: 735px) {
-      #playerName {
-        text-align: center;
-        display: flex;
-        padding: 2px;
-        margin: 0 auto;
-        font-size: 10px;
-        margin-top: 10px;
-        background-color: grey;
-      }
-    }
-
-
-    .clock{
-      text-align: center;
-      color: white;
-    }
-    @media only screen and (max-width: 735px) {
-      #timer{
-        text-align: center;
-        color: yellow;
-        font-size: 10px;
-      }
-    }
-
-    @media only screen and (max-width : 420px) {
-      p{
-        font-size: 100px;
-      }
-    }
-    /* ANIMATION  */
+#playerName {
+  text-align: center;
+  display: flex;
+  padding: 4px;
+  margin: 0 auto;
+  font-size: 2vw;
+  margin-top: 10px;
+  background-color: white;
+  color: #B12929;
+}
 
 
 
-    @media only screen and (max-width: 735px) {
-      .question-image {
-        text-align: center;
-        color: white;
-        font-size: 10px;
-        opacity: 0;
-      }
-    }
+.clock{
+  text-align: center;
+  color: white;
+}
 
-      /* NEON */
-
-      p {
-        text-align: center;
-        font-size: 20px;
-        margin: 20px 0 20px 0;
-      }
+/* ANIMATION  */
 
 
-      a {
-        text-decoration: none;
-        -webkit-transition: all 0.5s;
-        -moz-transition: all 0.5s;
-        transition: all 0.5s;
-        font-size: 70px;
-        color: white;
-      }
 
 
-      p a:hover {
-        color: red;
-      }
+/* NEON */
+
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  font-size: 70px;
+  color: white;
+}
+
+
+p a:hover {
+  color: red;
+}

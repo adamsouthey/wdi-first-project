@@ -59,8 +59,6 @@ $(() => {
         $('.welcome, .content, .winScreen, .lossScreen').hide();
         $('.clock, .left').show();
         $('body').removeClass('fail');
-        $('body').addClass('newBg');
-
 
         seconds = 60;
         score = 0;
