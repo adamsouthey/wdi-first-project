@@ -35,6 +35,8 @@ $(() => {
 
 
 
+
+
       //Start Game Button from Welcome Screen. ChosenLevel = targetClick, level1 = data value 1 - apply timePenalty(Key): 1(value)
       $('.start').on('click', function reload(e) {
 
@@ -107,15 +109,12 @@ $(() => {
       $('.card').on('click', function () {
         const num = $(this).attr('data-card-value');
         $(this).html('<p>' + num + '</p>').addClass('selected');
-
         app.checkForMatch();
       });
     },
 
     //Check for Match Function
     checkForMatch: () => {
-
-
       if($('.selected').length == 2) {
         if($('.selected').first().data('cardValue') == $('.selected').last().data('cardValue')) {
           //Remove Matching Pair From board and add 1 to scoreboard
