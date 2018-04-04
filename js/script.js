@@ -180,7 +180,6 @@ $(() => {
   //TIMER
 
   $('.startGameButton').on('click', function(){
-    $('body').addClass('newBg');
     $('.content').show();
 
     console.log(app.currentLevel.timePenalty);
