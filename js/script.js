@@ -181,6 +181,7 @@ $(() => {
 
   $('.startGameButton').on('click', function(){
     $('.content').show();
+    $('body').addClass('newBg');
 
     console.log(app.currentLevel.timePenalty);
 
