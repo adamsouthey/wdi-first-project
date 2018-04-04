@@ -112,11 +112,7 @@ p{
   perspective: 1000px;
   perspective-origin: 40% 400px;
   width: 100%;
-  background:url('Images/contentimg.png') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  height:100%;
 
 
 
@@ -295,7 +291,7 @@ p{
 
 .start{
   font-size:2vw;
-  color: black;
+    color: black;
 }
 
 .restart-current-level{
