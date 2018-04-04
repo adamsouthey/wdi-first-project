@@ -34,9 +34,6 @@ $(() => {
       $('.welcome').show();
 
 
-
-
-
       //Start Game Button from Welcome Screen. ChosenLevel = targetClick, level1 = data value 1 - apply timePenalty(Key): 1(value)
       $('.start').on('click', function reload(e) {
 
