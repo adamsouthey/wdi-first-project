@@ -41,7 +41,7 @@ $(() => {
         $restartCurrentLevel.data('level', chosenLevel);
         app.currentLevel = levels[chosenLevel];
         $('body').addClass('newBg');
-        $('.welcome').hide();
+        $('.welcome').show();
         $('.clock, .left').show();
 
 
