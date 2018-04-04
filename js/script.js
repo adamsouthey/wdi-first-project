@@ -40,9 +40,10 @@ $(() => {
         const chosenLevel = $(e.target).data('level');
         $restartCurrentLevel.data('level', chosenLevel);
         app.currentLevel = levels[chosenLevel];
-        // $('body').addClass('newBg');
+
         $('.welcome').hide();
         $('.clock, .left').show();
+        $('body').addClass('newBg');
 
 
         const name = $('#playerName').val();
