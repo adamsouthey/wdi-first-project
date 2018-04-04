@@ -287,10 +287,12 @@ p{
   padding: 0px;
   font-size: 30px;
   margin-top: 20px;
+
 }
 
 .start{
-  font-size: 19px;
+  font-size:3vw;
+    color: white;
 }
 
 
