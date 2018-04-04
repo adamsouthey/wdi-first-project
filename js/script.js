@@ -31,7 +31,7 @@ $(() => {
     currentLevel: null,
     initialise: () => {
       $('.lossScreen, .winScreen, .content, .left').hide();
-      $('.welcome').show();
+      $('.welcome').hide();
 
 
       //Start Game Button from Welcome Screen. ChosenLevel = targetClick, level1 = data value 1 - apply timePenalty(Key): 1(value)
