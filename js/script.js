@@ -40,10 +40,9 @@ $(() => {
         const chosenLevel = $(e.target).data('level');
         $restartCurrentLevel.data('level', chosenLevel);
         app.currentLevel = levels[chosenLevel];
-
         $('.welcome').hide();
         $('.clock, .left').show();
-        $('body').addClass('newBg');
+
 
 
         const name = $('#playerName').val();
@@ -182,6 +181,7 @@ $(() => {
 
   $('.startGameButton').on('click', function(){
     $('.content').show();
+    $('body').addClass('newBg');
 
     console.log(app.currentLevel.timePenalty);
 
